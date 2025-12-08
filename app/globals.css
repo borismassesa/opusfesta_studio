@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-brand-dark text-slate-400 antialiased overflow-x-hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+}
+
+/* Text stroke effect */
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.25);
+  color: transparent;
+  transition: color 0.3s ease;
+}
+
+.text-stroke:hover {
+  color: #7DD3FC;
+}
+
+.text-stroke-accent {
+  -webkit-text-stroke: 1px #7DD3FC;
+  color: transparent;
+}
+
+/* Selection styling */
+::selection {
+  background-color: #7DD3FC;
+  color: #0a0a0f;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
