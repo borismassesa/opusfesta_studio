@@ -19,30 +19,29 @@ export default function HeroSection() {
       <div className="lg:px-12 grid grid-cols-1 lg:grid-cols-12 w-full h-full max-w-[1920px] z-10 mr-auto ml-auto pt-20 pr-6 pb-20 pl-6 relative gap-x-8 gap-y-8 items-center">
         <div className="lg:col-span-8">
           <span className="inline-block py-1 px-3 border border-brand-accent/30 bg-brand-accent/5 text-brand-accent text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
-            New Studio Reel 2024
+            Now Booking Weddings & Events 2025
           </span>
           <h1 className="text-6xl md:text-8xl lg:text-[9rem] leading-[0.9] font-bold tracking-tighter text-white mb-8">
-            DIGITAL
+            CINEMATIC
             <br />
-            <span className="text-stroke text-transparent">CREATIVE STUDIO</span>
+            <span className="text-stroke text-transparent">VISUAL STORIES</span>
           </h1>
           <div className="w-24 h-1 bg-brand-accent mb-8"></div>
           <p className="text-slate-400 text-lg max-w-lg leading-relaxed font-light">
-            We design expressive brands, cinematic visuals, and interactive experiences for teams
-            building what&apos;s next. Strategy, design, and motion—all under one roof.
+            We capture the raw emotion of weddings, the energy of live events, and the professional essence of corporate milestones. Timeless photography and cinematic film—all crafted with a signature edge.
           </p>
           <div className="mt-12 flex gap-4">
             <a
               href="#"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-dark text-xs font-semibold uppercase tracking-widest transition-all duration-300 ease-out hover:bg-brand-accent hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(125,211,252,0.6)]"
             >
-              View Portfolio
+              Explore Portfolio
             </a>
             <a
               href="#"
               className="inline-flex items-center justify-center uppercase hover:border-white transition-colors text-xs font-bold text-white tracking-widest border-slate-700 border px-8 py-4"
             >
-              Download Deck
+              View Pricing
             </a>
           </div>
         </div>

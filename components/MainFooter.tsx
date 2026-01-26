@@ -7,16 +7,16 @@ export default function MainFooter() {
           {/* Left: Big CTA */}
           <div className="p-12 lg:p-20 border-b lg:border-b-0 lg:border-r border-slate-800 flex flex-col justify-center min-h-[400px]">
             <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white leading-[0.9] mb-8">
-              LET&apos;S BUILD
+              CAPTURE
               <br />
-              <span className="text-transparent text-stroke">WHAT&apos;S NEXT.</span>
+              <span className="text-transparent text-stroke">EVERY MOMENT.</span>
             </h2>
             <a
               href="#"
               className="group inline-flex items-center gap-4 text-white hover:text-brand-accent transition-colors w-max"
             >
               <span className="text-xs font-bold uppercase tracking-widest border-b border-white group-hover:border-brand-accent pb-1">
-                Start a Project
+                Book Your Date
               </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -39,8 +39,7 @@ export default function MainFooter() {
           {/* Right: Info & Contact */}
           <div className="p-12 lg:p-20 flex flex-col justify-center bg-white/[0.02]">
             <p className="text-slate-400 text-lg leading-relaxed max-w-md mb-12 font-light">
-              We partner with ambitious brands to create digital products and experiences that
-              leave a mark. Currently booking for Q1 2025.
+              We partner with couples and companies to document stories that matter. Cinematic films and high-end photography for the moments you never want to forget.
             </p>
             <div className="space-y-8">
               <div>

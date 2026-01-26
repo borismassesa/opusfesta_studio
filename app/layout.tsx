@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "TojoStudio - Digital Creative Studio",
-  description: "We design expressive brands, cinematic visuals, and interactive experiences for teams building what's next.",
+  title: "TojoStudio | Cinematic Wedding & Event Visuals",
+  description: "Capturing life's most defining moments. Professional photography and videography for weddings, luxury events, and corporate milestones.",
 };
 
 export default function RootLayout({

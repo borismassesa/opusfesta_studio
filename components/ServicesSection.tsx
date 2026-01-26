@@ -4,30 +4,30 @@ export default function ServicesSection() {
   const services = [
     {
       id: '001',
-      title: 'Brand Systems',
-      price: 'From £4,000',
+      title: 'Wedding Cinema',
+      price: 'From £2,500',
       image:
         'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/048e0a68-a97c-46dd-aed4-734f98009a4c_3840w.webp',
     },
     {
       id: '002',
-      title: 'Product Storytelling',
-      price: 'From £6,500',
-      oldPrice: '£7,500',
+      title: 'Event Photography',
+      price: 'From £1,200',
+      oldPrice: '£1,500',
       image:
         'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ad97e439-6931-4e5e-bcf3-b69be4018905_3840w.webp',
     },
     {
       id: '003',
-      title: 'Studio Retainers',
-      price: 'From £3,000/mo',
+      title: 'Corporate Milestones',
+      price: 'From £3,000',
       image:
         'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/52b4be58-0ae9-4f19-88ed-d742fc1abef3_3840w.jpg',
     },
     {
       id: '004',
-      title: 'Web Experiences',
-      price: 'From £8,500',
+      title: 'Commercial Ads',
+      price: 'From £5,000',
       image:
         'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/71087bc3-4cb0-48eb-b49a-6a1587f575d7_3840w.jpg',
     },
