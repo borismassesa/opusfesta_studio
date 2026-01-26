@@ -2,22 +2,22 @@ export default function FeaturedProjects() {
   const projects = [
     {
       id: '01',
-      category: 'Brand & Web',
-      title: 'Neon Grid Identity',
+      category: 'Wedding Film',
+      title: 'A Highland Romance',
       image:
         'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/9df63a50-60c8-434f-b5f3-fc24be587c03_3840w.webp',
     },
     {
       id: '02',
-      category: 'Product Video',
-      title: 'Midnight Interface Film',
+      category: 'Event Photography',
+      title: 'Gala Night 2024',
       image:
         'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/b098c29a-9a00-4e0f-ae2c-2d810567550e_3840w.webp',
     },
     {
       id: '03',
-      category: 'Experiential',
-      title: 'Immersive Gallery Space',
+      category: 'Corporate Film',
+      title: 'Vision 2030 Summit',
       image:
         'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c669426e-538c-46a9-b426-c5223887e80f_3840w.webp',
     },
