@@ -1,4 +1,4 @@
-# TojoStudio
+# Opusfesta Studio
 
 A modern, dark-themed creative studio portfolio website built with Next.js, TypeScript, and Tailwind CSS.
 

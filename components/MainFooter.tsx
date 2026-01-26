@@ -47,10 +47,10 @@ export default function MainFooter() {
                   New Business
                 </p>
                 <a
-                  href="mailto:hello@tojostudio.com"
+                  href="mailto:hello@opusfesta.com"
                   className="text-2xl md:text-3xl font-bold text-white hover:text-brand-accent transition-colors tracking-tight"
                 >
-                  hello@tojostudio.com
+                  hello@opusfesta.com
                 </a>
               </div>
 
@@ -198,14 +198,14 @@ export default function MainFooter() {
           <div className="p-8 lg:p-12 flex flex-col justify-between h-full bg-slate-900/20">
             <div className="mb-8">
               <div className="w-10 h-10 border border-white/20 flex items-center justify-center font-bold text-white text-sm tracking-tighter mb-4">
-                TS
+                OS
               </div>
               <p className="text-[10px] font-bold text-white uppercase leading-tight tracking-widest">
-                TOJO STUDIO London, UK
+                OPUSFESTA STUDIO London, UK
               </p>
             </div>
             <p className="text-[10px] text-slate-600 font-mono">
-              © 2024 TojoStudio. All rights reserved.
+              © 2024 Opusfesta Studio. All rights reserved.
             </p>
           </div>
         </div>

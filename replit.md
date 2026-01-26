@@ -1,7 +1,7 @@
-# TojoStudio - Digital Creative Studio
+# Opusfesta Studio - Digital Creative Studio
 
 ## Overview
-This is a Next.js 15 website for TojoStudio, a digital creative studio. The site showcases their portfolio, services, and contact information.
+This is a Next.js 15 website for Opusfesta Studio, a digital creative studio. The site showcases their portfolio, services, and contact information.
 
 ## Tech Stack
 - **Framework**: Next.js 15.5.7
