@@ -85,7 +85,7 @@ export default function FeaturedProjects() {
             : 'opacity-0 translate-y-8'
         }`}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 lg:gap-16 items-end">
           <div>
             <span className="text-xs font-bold text-brand-accent tracking-widest uppercase font-mono mb-6 block">
               About the Studio
@@ -94,8 +94,8 @@ export default function FeaturedProjects() {
               We don&apos;t just document moments — we craft visual stories that live forever.
             </h2>
           </div>
-          <div className="lg:pt-10">
-            <p className="text-white/50 text-lg leading-relaxed font-light mb-10">
+          <div>
+            <p className="text-white/50 text-base lg:text-lg leading-relaxed font-light mb-8">
               OpusFesta Studio is a team of filmmakers, photographers, and creative directors who believe every milestone deserves a cinematic treatment. From intimate elopements to 500-guest galas, we bring the same obsessive attention to light, composition, and narrative.
             </p>
             <a
