@@ -108,16 +108,20 @@ export default function ServicesSection() {
               : 'opacity-0 translate-y-8'
           }`}
         >
-          <span className="text-xs font-bold text-brand-accent tracking-widest uppercase font-mono mb-6 block">
-            What We Do
-          </span>
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-brand-dark leading-[0.9]">
-            WE CAPTURE<br />
-            <span className="text-stroke">EVERYTHING.</span>
-          </h2>
-          <p className="text-neutral-500 text-lg max-w-xl mt-8 leading-relaxed font-light">
-            From intimate weddings to large-scale productions. If it moves us, we shoot it.
-          </p>
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+            <div>
+              <span className="text-xs font-bold text-brand-accent tracking-widest uppercase font-mono mb-6 block">
+                What We Do
+              </span>
+              <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-brand-dark leading-[0.9]">
+                WE CAPTURE<br />
+                <span className="text-stroke">EVERYTHING.</span>
+              </h2>
+            </div>
+            <p className="text-neutral-500 text-lg max-w-sm leading-relaxed font-light md:text-right">
+              From intimate weddings to large-scale productions. If it moves us, we shoot it.
+            </p>
+          </div>
         </div>
 
         <div className="border-t-4 border-brand-border">
