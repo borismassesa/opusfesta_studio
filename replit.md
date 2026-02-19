@@ -17,24 +17,20 @@ Next.js 15 website for OpusFesta Studio, a photography and videography studio sp
 │   ├── layout.tsx     # Root layout with metadata
 │   └── page.tsx       # Home page
 ├── components/        # React components
-│   ├── Header.tsx
-│   ├── HeroSection.tsx
-│   ├── FeaturedProjects.tsx    # Stats bar + studio intro + marquee
-│   ├── ServicesSection.tsx     # Numbered accordion (01-06)
-│   ├── ProcessSection.tsx      # 4-step workflow (How It Works)
-│   ├── VideoLightboxSection.tsx # Studio reel with lightbox
+│   ├── Header.tsx             # Fixed header with menu + Book Now CTA
+│   ├── HeroSection.tsx        # Full-screen hero with headline
+│   ├── FeaturedProjects.tsx   # Stats bar + studio intro + marquee
+│   ├── ServicesSection.tsx    # Numbered accordion (01-06)
+│   ├── ProcessSection.tsx     # 4-step workflow with timeline
 │   ├── SignatureWorkSection.tsx # Portfolio showcase
+│   ├── VideoLightboxSection.tsx # Studio reel with lightbox
 │   ├── TestimonialsCarousel.tsx # Client quotes with side nav
-│   ├── FAQSection.tsx          # Expandable FAQ accordion
-│   ├── JournalSection.tsx      # Blog/articles
-│   ├── NewsletterSection.tsx   # Email signup
-│   ├── CTASection.tsx          # Final call to action
-│   ├── NavigationFooter.tsx    # Section links bar
-│   ├── MainFooter.tsx          # Contact + social + legal
-│   ├── MenuSidebar.tsx
-│   ├── CartSidebar.tsx
-│   ├── GridOverlay.tsx
-│   └── BackToTop.tsx
+│   ├── FAQSection.tsx         # Expandable FAQ accordion
+│   ├── CTASection.tsx         # Final call to action
+│   ├── MainFooter.tsx         # Contact + social + legal
+│   ├── MenuSidebar.tsx        # Slide-out navigation menu
+│   ├── GridOverlay.tsx        # Subtle background grid
+│   └── BackToTop.tsx          # Scroll to top button
 ├── next.config.ts     # Next.js configuration
 ├── tailwind.config.ts # Tailwind CSS configuration
 ├── tsconfig.json      # TypeScript configuration
@@ -62,21 +58,17 @@ npm run dev
 1. Hero
 2. Featured Projects (stats + intro + marquee)
 3. Services (accordion)
-4. Process (How It Works - 4 steps)
-5. Video Reel (lightbox)
-6. Signature Work (portfolio)
+4. Process (How It Works - interactive timeline)
+5. Signature Work (portfolio)
+6. Video Reel (lightbox)
 7. Testimonials (carousel)
 8. FAQ (accordion)
-9. Journal (blog)
-10. Newsletter (email signup)
-11. CTA (Book Your Date)
-12. Navigation Footer
-13. Main Footer
+9. CTA (Book Your Date)
+10. Main Footer
 
 ## Recent Changes
-- Added Process, FAQ, Newsletter, and CTA sections
-- Redesigned Video Reel section with split layout and lightbox
-- Redesigned Testimonials with side navigation
-- Fixed mobile/tablet responsiveness across all components
-- Updated logo to "OpusFesta — Studio"
-- Fixed navigation links to scroll to sections
+- Removed CartSidebar, JournalSection, NewsletterSection, NavigationFooter (not needed for a studio site)
+- Replaced cart icon in header with "Book Now" CTA button
+- Updated MenuSidebar links to point to actual page sections
+- Rearranged sections: Portfolio now comes before Video Reel for better flow
+- Redesigned ProcessSection with dark background, interactive timeline, and step navigator
