@@ -21,13 +21,13 @@ export default function HeroSection() {
             muted
             loop
             playsInline
-            className="absolute top-0 right-0 w-full h-full object-cover opacity-40"
+            className="absolute top-0 right-0 w-full h-full object-cover opacity-80"
           >
             <source src="/videos/hero-bg.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark from-5% via-brand-dark/90 via-35% to-brand-dark/20 pointer-events-none"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-brand-dark/40 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark from-0% via-brand-dark/80 via-30% to-transparent pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent pointer-events-none"></div>
       </div>
 
       <div className="lg:px-12 grid grid-cols-1 lg:grid-cols-12 w-full h-full max-w-[1920px] z-10 mr-auto ml-auto pt-20 pr-6 pb-20 pl-6 relative gap-x-8 gap-y-8 items-center">
