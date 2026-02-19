@@ -60,15 +60,6 @@ export default function HeroSection() {
             </a>
           </div>
         </div>
-
-        <div className="lg:col-span-4 hidden lg:flex flex-col items-end gap-2 pr-4">
-          <div className="text-right">
-            <div className="text-5xl font-bold text-white/10 font-mono">01</div>
-            <div className="text-xs text-brand-accent uppercase tracking-widest mt-2">
-              Featured Case
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
