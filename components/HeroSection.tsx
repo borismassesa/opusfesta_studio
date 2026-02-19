@@ -71,17 +71,6 @@ export default function HeroSection() {
               Featured Case
             </div>
           </div>
-          <div className="bg-brand-bg border-2 border-brand-border max-w-xs mt-12 pt-6 pr-6 pb-6 pl-6">
-            <div className="flex justify-between items-center mb-4">
-              <span className="uppercase text-xs text-neutral-600">Studio Status</span>
-              <span className="w-2 h-2 bg-brand-accent"></span>
-            </div>
-            <p className="text-sm text-brand-dark font-mono">
-              ACCEPTING PROJECTS
-              <br />
-              Q1–Q2 2025 BOOKING
-            </p>
-          </div>
         </div>
       </div>
     </section>
