@@ -47,10 +47,10 @@ export default function MainFooter() {
                   New Business
                 </p>
                 <a
-                  href="mailto:hello@opusfesta.com"
+                  href="mailto:studio@opusfesta.com"
                   className="text-2xl sm:text-3xl md:text-4xl font-bold text-white hover:text-brand-accent transition-colors tracking-tight"
                 >
-                  hello@opusfesta.com
+                  studio@opusfesta.com
                 </a>
               </div>
 
@@ -59,10 +59,10 @@ export default function MainFooter() {
                   Phone
                 </p>
                 <a
-                  href="tel:+255712345678"
+                  href="tel:+255799242475"
                   className="text-xl sm:text-2xl font-bold text-white hover:text-brand-accent transition-colors tracking-tight"
                 >
-                  +255 712 345 678
+                  +255 799 242 475
                 </a>
               </div>
 
@@ -71,8 +71,8 @@ export default function MainFooter() {
                   Studio
                 </p>
                 <p className="text-white/60 text-sm leading-relaxed font-light">
-                  Masaki, Haile Selassie Road<br />
-                  Dar es Salaam, Tanzania
+                  Mbezi, Dar es Salaam<br />
+                  Tanzania
                 </p>
               </div>
 
