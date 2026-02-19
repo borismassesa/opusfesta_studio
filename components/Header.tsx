@@ -32,9 +32,9 @@ export default function Header({ onMenuToggle, onCartToggle }: HeaderProps) {
 
           <a
             href="#"
-            className="px-4 h-12 border-2 border-brand-border flex items-center justify-center font-bold text-brand-dark text-sm tracking-tight hover:border-brand-accent hover:text-brand-accent transition-colors whitespace-nowrap"
+            className="px-5 h-12 border-4 border-brand-dark bg-brand-dark text-white flex items-center justify-center font-black text-sm uppercase tracking-widest hover:bg-brand-accent hover:border-brand-accent transition-colors whitespace-nowrap"
           >
-            OpusFesta Studio
+            OPUSFESTA
           </a>
 
           <div className="flex items-center gap-6">
