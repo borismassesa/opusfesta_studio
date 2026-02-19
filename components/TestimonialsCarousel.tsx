@@ -80,7 +80,7 @@ export default function TestimonialsCarousel() {
       ref={sectionRef}
       className="py-28 lg:py-36 relative bg-brand-bg z-10 overflow-hidden"
     >
-      <div className="absolute top-12 left-12 text-[12rem] lg:text-[20rem] font-bold text-neutral-100 leading-none select-none pointer-events-none font-mono">
+      <div className="absolute top-8 left-6 sm:top-12 sm:left-12 text-[8rem] sm:text-[12rem] lg:text-[20rem] font-bold text-neutral-100 leading-none select-none pointer-events-none font-mono">
         &ldquo;
       </div>
 
@@ -95,11 +95,11 @@ export default function TestimonialsCarousel() {
               Testimonials
             </span>
 
-            <div className="relative min-h-[220px] sm:min-h-[180px] md:min-h-[140px] mb-10">
+            <div className="relative min-h-[180px] sm:min-h-[180px] md:min-h-[140px] mb-10">
               {testimonials.map((t, i) => (
                 <p
                   key={i}
-                  className={`absolute inset-0 text-2xl md:text-3xl lg:text-4xl font-bold text-brand-dark tracking-tighter leading-[1.2] transition-all duration-500 ${
+                  className={`absolute inset-0 text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-brand-dark tracking-tighter leading-[1.2] transition-all duration-500 ${
                     currentIndex === i
                       ? 'opacity-100 translate-y-0'
                       : 'opacity-0 translate-y-4 pointer-events-none'
