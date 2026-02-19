@@ -26,6 +26,11 @@ body {
   color: transparent;
 }
 
+.text-stroke-light {
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.4);
+  color: transparent;
+}
+
 ::selection {
   background-color: #C45A3C;
   color: #FAFAF8;
