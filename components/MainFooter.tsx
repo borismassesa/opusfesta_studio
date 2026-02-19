@@ -194,10 +194,10 @@ export default function MainFooter() {
           <div className="p-8 lg:p-12 flex flex-col justify-between h-full bg-brand-bg">
             <div className="mb-8">
               <div className="px-4 h-10 border-4 border-brand-dark bg-brand-dark text-white inline-flex items-center justify-center font-black text-sm uppercase tracking-widest mb-4">
-                OPUSFESTA
+                OpusFesta — Studio
               </div>
               <p className="text-[10px] font-bold text-brand-dark uppercase leading-tight tracking-widest">
-                OPUSFESTA STUDIO London, UK
+                OpusFesta — Studio London, UK
               </p>
             </div>
             <p className="text-[10px] text-neutral-400 font-mono">
