@@ -1,6 +1,40 @@
+'use client';
+
+import { useRef, useEffect, useState, useCallback } from 'react';
 import Image from 'next/image';
 
 export default function ServicesSection() {
+  const [visibleItems, setVisibleItems] = useState<Set<string>>(new Set());
+  const refs = useRef<Map<string, HTMLElement>>(new Map());
+
+  const setRef = useCallback((id: string) => (el: HTMLElement | null) => {
+    if (el) {
+      refs.current.set(id, el);
+    }
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = Array.from(refs.current.entries()).find(
+              ([, el]) => el === entry.target
+            )?.[0];
+            if (id) {
+              setVisibleItems((prev) => new Set(prev).add(id));
+            }
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    refs.current.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   const services = [
     {
       id: '01',
@@ -47,7 +81,14 @@ export default function ServicesSection() {
   return (
     <section className="py-24 relative z-10 bg-brand-bg">
       <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6 border-b-4 border-brand-border pb-8">
+        <div
+          ref={setRef('services-header')}
+          className={`flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6 border-b-4 border-brand-border pb-8 transition-all duration-700 ${
+            visibleItems.has('services-header')
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-8'
+          }`}
+        >
           <div>
             <span className="text-xs font-bold text-brand-accent tracking-widest uppercase font-mono mb-4 block">
               What We Do
@@ -79,95 +120,129 @@ export default function ServicesSection() {
         </div>
 
         <div className="space-y-0">
-          {services.map((service, index) => (
-            <div
-              key={service.id}
-              className={`group grid grid-cols-1 lg:grid-cols-2 border-4 border-brand-border ${
-                index > 0 ? '-mt-1' : ''
-              }`}
-            >
+          {services.map((service, index) => {
+            const itemId = `service-${service.id}`;
+            const isVisible = visibleItems.has(itemId);
+
+            return (
               <div
-                className={`relative aspect-[16/10] lg:aspect-auto lg:min-h-[450px] overflow-hidden ${
-                  index % 2 === 1 ? 'lg:order-2' : ''
+                key={service.id}
+                ref={setRef(itemId)}
+                className={`group grid grid-cols-1 lg:grid-cols-2 border-4 border-brand-border transition-all duration-700 ${
+                  index > 0 ? '-mt-1' : ''
+                } ${
+                  isVisible
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-16'
                 }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute top-6 left-6 z-10">
-                  <span className="text-7xl lg:text-8xl font-bold text-white/20 font-mono leading-none">
-                    {service.id}
-                  </span>
-                </div>
-              </div>
-
-              <div
-                className={`flex flex-col justify-center p-10 lg:p-16 bg-brand-bg group-hover:bg-brand-panel transition-colors ${
-                  index % 2 === 1 ? 'lg:order-1' : ''
-                }`}
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="w-8 h-[2px] bg-brand-accent"></span>
-                  <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest">
-                    Service {service.id}
-                  </span>
-                </div>
-
-                <h3 className="text-3xl lg:text-5xl font-bold text-brand-dark uppercase tracking-tighter mb-6 group-hover:text-brand-accent transition-colors">
-                  {service.title}
-                </h3>
-
-                <p className="text-neutral-600 leading-relaxed mb-8 max-w-md font-light">
-                  {service.description}
-                </p>
-
-                <div className="mb-10">
-                  <p className="text-[10px] font-bold text-neutral-500 uppercase tracking-widest mb-3">
-                    Includes
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {service.includes.map((item) => (
-                      <span
-                        key={item}
-                        className="text-[11px] font-mono text-brand-dark border-2 border-brand-border px-3 py-1.5 uppercase tracking-wide"
-                      >
-                        {item}
-                      </span>
-                    ))}
+                <div
+                  className={`relative aspect-[16/10] lg:aspect-auto lg:min-h-[450px] overflow-hidden ${
+                    index % 2 === 1 ? 'lg:order-2' : ''
+                  }`}
+                >
+                  <div
+                    className={`absolute inset-0 transition-transform duration-1000 delay-300 ${
+                      isVisible ? 'scale-100' : 'scale-110'
+                    }`}
+                  >
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div className={`absolute top-6 left-6 z-10 transition-all duration-700 delay-500 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+                  }`}>
+                    <span className="text-7xl lg:text-8xl font-bold text-white/20 font-mono leading-none">
+                      {service.id}
+                    </span>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-brand-dark font-mono tracking-tight">
-                    {service.price}
-                  </span>
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-brand-dark text-white text-xs font-bold uppercase tracking-widest hover:bg-brand-accent transition-colors"
-                  >
-                    Enquire
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                <div
+                  className={`flex flex-col justify-center p-10 lg:p-16 bg-brand-bg group-hover:bg-brand-panel transition-colors ${
+                    index % 2 === 1 ? 'lg:order-1' : ''
+                  }`}
+                >
+                  <div className={`flex items-center gap-4 mb-6 transition-all duration-500 delay-200 ${
+                    isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'
+                  }`}>
+                    <span className={`h-[2px] bg-brand-accent transition-all duration-700 delay-[400ms] ${
+                      isVisible ? 'w-8' : 'w-0'
+                    }`}></span>
+                    <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest">
+                      Service {service.id}
+                    </span>
+                  </div>
+
+                  <h3 className={`text-3xl lg:text-5xl font-bold text-brand-dark uppercase tracking-tighter mb-6 group-hover:text-brand-accent transition-all duration-700 delay-300 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+                  }`}>
+                    {service.title}
+                  </h3>
+
+                  <p className={`text-neutral-600 leading-relaxed mb-8 max-w-md font-light transition-all duration-700 delay-[400ms] ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+                  }`}>
+                    {service.description}
+                  </p>
+
+                  <div className={`mb-10 transition-all duration-700 delay-500 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+                  }`}>
+                    <p className="text-[10px] font-bold text-neutral-500 uppercase tracking-widest mb-3">
+                      Includes
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {service.includes.map((item, i) => (
+                        <span
+                          key={item}
+                          className={`text-[11px] font-mono text-brand-dark border-2 border-brand-border px-3 py-1.5 uppercase tracking-wide transition-all duration-500 ${
+                            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                          }`}
+                          style={{ transitionDelay: `${550 + i * 80}ms` }}
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className={`flex items-center justify-between transition-all duration-700 delay-700 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+                  }`}>
+                    <span className="text-2xl font-bold text-brand-dark font-mono tracking-tight">
+                      {service.price}
+                    </span>
+                    <a
+                      href="#"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-brand-dark text-white text-xs font-bold uppercase tracking-widest hover:bg-brand-accent transition-colors"
                     >
-                      <path d="M5 12h14m-7-7l7 7l-7 7"></path>
-                    </svg>
-                  </a>
+                      Enquire
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M5 12h14m-7-7l7 7l-7 7"></path>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
