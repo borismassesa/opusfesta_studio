@@ -201,7 +201,7 @@ export default function MainFooter() {
               </p>
             </div>
             <p className="text-[10px] text-neutral-400 font-mono">
-              © 2024 Opusfesta Studio. All rights reserved.
+              © 2024 OpusFesta Studio. All rights reserved.
             </p>
           </div>
         </div>

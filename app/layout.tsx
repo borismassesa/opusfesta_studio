@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Opusfesta Studio | Cinematic Wedding & Event Visuals",
+  title: "OpusFesta Studio | Cinematic Wedding & Event Visuals",
   description: "Capturing life's most defining moments. Professional photography and videography for weddings, luxury events, and corporate milestones.",
 };
 

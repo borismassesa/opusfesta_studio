@@ -17,7 +17,7 @@ export default function TestimonialsCarousel() {
     },
     {
       quote:
-        'Opusfesta Studio transformed our brand identity completely. Their attention to detail and creative vision exceeded all our expectations.',
+        'OpusFesta Studio transformed our brand identity completely. Their attention to detail and creative vision exceeded all our expectations.',
       author: 'Sarah Mitchell',
       role: 'CEO, NEXUS TECH',
       avatar:

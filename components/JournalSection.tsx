@@ -7,7 +7,7 @@ export default function JournalSection() {
         'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/74ce626d-5eba-470d-a4e4-159b9c6cad3c_3840w.webp',
       date: 'July 11, 2025',
       title: "Designing Systems That Don't Feel Systematic",
-      author: 'Opusfesta Studio',
+      author: 'OpusFesta Studio',
       category: 'Process',
     },
     {
@@ -15,7 +15,7 @@ export default function JournalSection() {
         'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/79b36b7a-a9b2-4eb8-a45d-27fe69423a98_3840w.jpg',
       date: 'June 03, 2025',
       title: 'Behind the Scenes of Our Latest Product Film',
-      author: 'Opusfesta Studio',
+      author: 'OpusFesta Studio',
       category: 'Motion',
     },
     {
@@ -23,7 +23,7 @@ export default function JournalSection() {
         'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/bb37e13b-1cf2-4a1f-ad35-d5499d2a18a2_3840w.webp',
       date: 'May 19, 2025',
       title: 'Why We Treat Every Brief Like a Short Film',
-      author: 'Opusfesta Studio',
+      author: 'OpusFesta Studio',
       category: 'Culture',
     },
   ];
