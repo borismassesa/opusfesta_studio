@@ -26,8 +26,8 @@ export default function HeroSection() {
             <source src="/videos/hero-bg.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/70 via-40% to-brand-dark/30 pointer-events-none"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/50 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark from-5% via-brand-dark/90 via-35% to-brand-dark/20 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-brand-dark/40 pointer-events-none"></div>
       </div>
 
       <div className="lg:px-12 grid grid-cols-1 lg:grid-cols-12 w-full h-full max-w-[1920px] z-10 mr-auto ml-auto pt-20 pr-6 pb-20 pl-6 relative gap-x-8 gap-y-8 items-center">
