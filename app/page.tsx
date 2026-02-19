@@ -8,10 +8,14 @@ import GridOverlay from '@/components/GridOverlay';
 import HeroSection from '@/components/HeroSection';
 import FeaturedProjects from '@/components/FeaturedProjects';
 import ServicesSection from '@/components/ServicesSection';
+import ProcessSection from '@/components/ProcessSection';
 import VideoLightboxSection from '@/components/VideoLightboxSection';
 import SignatureWorkSection from '@/components/SignatureWorkSection';
-import JournalSection from '@/components/JournalSection';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
+import FAQSection from '@/components/FAQSection';
+import JournalSection from '@/components/JournalSection';
+import NewsletterSection from '@/components/NewsletterSection';
+import CTASection from '@/components/CTASection';
 import NavigationFooter from '@/components/NavigationFooter';
 import MainFooter from '@/components/MainFooter';
 import BackToTop from '@/components/BackToTop';
@@ -29,10 +33,14 @@ export default function Home() {
       <HeroSection />
       <FeaturedProjects />
       <ServicesSection />
+      <ProcessSection />
       <VideoLightboxSection />
       <SignatureWorkSection />
-      <JournalSection />
       <TestimonialsCarousel />
+      <FAQSection />
+      <JournalSection />
+      <NewsletterSection />
+      <CTASection />
       <NavigationFooter />
       <MainFooter />
       <BackToTop />
