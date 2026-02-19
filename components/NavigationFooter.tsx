@@ -8,7 +8,7 @@ export default function NavigationFooter() {
   return (
     <div className="border-t-4 border-brand-border bg-brand-bg px-6 lg:px-12 relative z-10">
       <div className="flex items-center justify-between h-20 text-[10px] font-bold text-neutral-500 uppercase tracking-widest">
-        <button className="w-12 h-12 hover:bg-brand-panel flex items-center justify-center transition-colors border-r-2 border-brand-border text-brand-dark">
+        <button onClick={scrollToTop} className="w-12 h-12 hover:bg-brand-panel flex items-center justify-center transition-colors border-r-2 border-brand-border text-brand-dark">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -24,10 +24,10 @@ export default function NavigationFooter() {
           </svg>
         </button>
         <div className="flex-1 flex justify-center gap-8 md:gap-24">
-          <span className="text-brand-accent">01 Home</span>
-          <span className="hover:text-brand-dark cursor-pointer">02 Work</span>
-          <span className="hover:text-brand-dark cursor-pointer">03 Services</span>
-          <span className="hover:text-brand-dark cursor-pointer">04 Contact</span>
+          <button onClick={scrollToTop} className="text-brand-accent hover:text-brand-dark transition-colors">01 Home</button>
+          <a href="#work" className="hover:text-brand-dark transition-colors">02 Work</a>
+          <a href="#services" className="hover:text-brand-dark transition-colors">03 Services</a>
+          <a href="#contact" className="hover:text-brand-dark transition-colors">04 Contact</a>
         </div>
         <button
           onClick={scrollToTop}

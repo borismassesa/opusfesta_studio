@@ -70,7 +70,7 @@ export default function SignatureWorkSection() {
   ];
 
   return (
-    <section className="py-24 relative z-10 bg-brand-bg">
+    <section id="work" className="py-24 relative z-10 bg-brand-bg">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div
           ref={setRef('sig-header')}

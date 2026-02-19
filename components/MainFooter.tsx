@@ -1,6 +1,6 @@
 export default function MainFooter() {
   return (
-    <footer className="bg-brand-panel border-t-4 border-brand-border relative z-10">
+    <footer id="contact" className="bg-brand-panel border-t-4 border-brand-border relative z-10">
       <div className="max-w-[1920px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 border-b-2 border-brand-border">
           <div className="p-12 lg:p-20 border-b-2 lg:border-b-0 lg:border-r-2 border-brand-border flex flex-col justify-center min-h-[400px]">
@@ -125,12 +125,12 @@ export default function MainFooter() {
             <h4 className="text-xs font-bold text-brand-dark uppercase tracking-widest mb-6">Studio</h4>
             <ul className="space-y-3 text-xs font-mono text-neutral-500 uppercase tracking-wide">
               <li>
-                <a href="#" className="hover:text-brand-accent transition-colors">
+                <a href="#work" className="hover:text-brand-accent transition-colors">
                   Work
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-brand-accent transition-colors">
+                <a href="#services" className="hover:text-brand-accent transition-colors">
                   Services
                 </a>
               </li>
@@ -140,7 +140,7 @@ export default function MainFooter() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-brand-accent transition-colors">
+                <a href="#contact" className="hover:text-brand-accent transition-colors">
                   Contact
                 </a>
               </li>
