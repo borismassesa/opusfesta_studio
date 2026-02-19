@@ -23,11 +23,11 @@ export default function NavigationFooter() {
             <path d="m12 19l-7-7l7-7m7 7H5"></path>
           </svg>
         </button>
-        <div className="flex-1 flex justify-center gap-8 md:gap-24">
-          <button onClick={scrollToTop} className="text-brand-accent hover:text-brand-dark transition-colors">01 Home</button>
-          <a href="#work" className="hover:text-brand-dark transition-colors">02 Work</a>
-          <a href="#services" className="hover:text-brand-dark transition-colors">03 Services</a>
-          <a href="#contact" className="hover:text-brand-dark transition-colors">04 Contact</a>
+        <div className="flex-1 flex justify-center gap-4 sm:gap-8 md:gap-24 overflow-x-auto">
+          <button onClick={scrollToTop} className="text-brand-accent hover:text-brand-dark transition-colors whitespace-nowrap hidden sm:block">01 Home</button>
+          <a href="#work" className="hover:text-brand-dark transition-colors whitespace-nowrap">02 Work</a>
+          <a href="#services" className="hover:text-brand-dark transition-colors whitespace-nowrap">03 Services</a>
+          <a href="#contact" className="hover:text-brand-dark transition-colors whitespace-nowrap">04 Contact</a>
         </div>
         <button
           onClick={scrollToTop}

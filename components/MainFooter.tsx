@@ -3,8 +3,8 @@ export default function MainFooter() {
     <footer id="contact" className="bg-brand-panel border-t-4 border-brand-border relative z-10">
       <div className="max-w-[1920px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 border-b-2 border-brand-border">
-          <div className="p-12 lg:p-20 border-b-2 lg:border-b-0 lg:border-r-2 border-brand-border flex flex-col justify-center min-h-[400px]">
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-brand-dark leading-[0.9] mb-8">
+          <div className="p-8 sm:p-12 lg:p-20 border-b-2 lg:border-b-0 lg:border-r-2 border-brand-border flex flex-col justify-center min-h-[300px] sm:min-h-[400px]">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-brand-dark leading-[0.9] mb-8">
               CAPTURE
               <br />
               <span className="text-transparent text-stroke">EVERY MOMENT.</span>
@@ -34,7 +34,7 @@ export default function MainFooter() {
             </a>
           </div>
 
-          <div className="p-12 lg:p-20 flex flex-col justify-center bg-brand-bg">
+          <div className="p-8 sm:p-12 lg:p-20 flex flex-col justify-center bg-brand-bg">
             <p className="text-neutral-600 text-lg leading-relaxed max-w-md mb-12 font-light">
               We partner with couples and companies to document stories that matter. Cinematic films and high-end photography for the moments you never want to forget.
             </p>
@@ -120,7 +120,7 @@ export default function MainFooter() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-brand-border border-b-2 border-brand-border">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 divide-y sm:divide-x md:divide-y-0 divide-brand-border border-b-2 border-brand-border">
           <div className="p-8 lg:p-12">
             <h4 className="text-xs font-bold text-brand-dark uppercase tracking-widest mb-6">Studio</h4>
             <ul className="space-y-3 text-xs font-mono text-neutral-500 uppercase tracking-wide">

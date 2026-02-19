@@ -145,13 +145,13 @@ export default function ServicesSection() {
                   onClick={() => toggleExpand(service.id)}
                   aria-expanded={isExpanded}
                   aria-controls={`panel-${service.id}`}
-                  className="w-full py-8 lg:py-10 flex items-center gap-6 lg:gap-10 group text-left cursor-pointer focus-visible:outline-2 focus-visible:outline-brand-accent focus-visible:outline-offset-4"
+                  className="w-full py-6 sm:py-8 lg:py-10 flex items-center gap-3 sm:gap-6 lg:gap-10 group text-left cursor-pointer focus-visible:outline-2 focus-visible:outline-brand-accent focus-visible:outline-offset-4"
                 >
-                  <span className="text-4xl lg:text-6xl font-bold text-neutral-200 font-mono leading-none min-w-[60px] lg:min-w-[90px] group-hover:text-brand-accent transition-colors duration-300">
+                  <span className="text-2xl sm:text-4xl lg:text-6xl font-bold text-neutral-200 font-mono leading-none min-w-[40px] sm:min-w-[60px] lg:min-w-[90px] group-hover:text-brand-accent transition-colors duration-300">
                     {service.id}
                   </span>
 
-                  <h3 id={`heading-${service.id}`} className="text-2xl lg:text-4xl xl:text-5xl font-bold text-brand-dark tracking-tighter group-hover:text-brand-accent transition-colors duration-300 flex-1">
+                  <h3 id={`heading-${service.id}`} className="text-lg sm:text-2xl lg:text-4xl xl:text-5xl font-bold text-brand-dark tracking-tighter group-hover:text-brand-accent transition-colors duration-300 flex-1">
                     {service.title}
                   </h3>
 
@@ -193,7 +193,7 @@ export default function ServicesSection() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                  <div className="pb-10 pl-[84px] lg:pl-[130px] pr-6">
+                  <div className="pb-10 pl-6 sm:pl-[84px] lg:pl-[130px] pr-6">
                     <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-8 lg:gap-12">
                       <div>
                         <p className="text-neutral-600 leading-relaxed max-w-2xl mb-8 text-base lg:text-lg font-light">

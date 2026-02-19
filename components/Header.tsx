@@ -12,7 +12,7 @@ export default function Header({ onMenuToggle, onCartToggle }: HeaderProps) {
         <div className="flex items-center justify-between h-20">
           <button
             onClick={onMenuToggle}
-            className="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-brand-dark hover:text-brand-accent transition-all duration-200 px-3 py-2 border-2 border-brand-dark shadow-brutal-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1"
+            className="flex items-center gap-2 sm:gap-3 text-xs font-bold uppercase tracking-widest text-brand-dark hover:text-brand-accent transition-all duration-200 px-2 sm:px-3 py-2 border-2 border-brand-dark shadow-brutal-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -32,12 +32,12 @@ export default function Header({ onMenuToggle, onCartToggle }: HeaderProps) {
 
           <a
             href="#"
-            className="px-5 h-12 border-4 border-brand-dark bg-brand-dark text-white flex items-center justify-center font-black text-sm uppercase tracking-widest hover:bg-brand-accent hover:border-brand-accent transition-all duration-200 whitespace-nowrap shadow-brutal-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1"
+            className="px-3 sm:px-5 h-10 sm:h-12 border-4 border-brand-dark bg-brand-dark text-white flex items-center justify-center font-black text-[10px] sm:text-sm uppercase tracking-widest hover:bg-brand-accent hover:border-brand-accent transition-all duration-200 whitespace-nowrap shadow-brutal-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1"
           >
             OpusFesta — Studio
           </a>
 
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-2 sm:gap-6">
             <button className="text-brand-dark hover:text-brand-accent transition-all duration-200 p-2 border-2 border-brand-dark shadow-brutal-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -95,7 +95,7 @@ export default function TestimonialsCarousel() {
               Testimonials
             </span>
 
-            <div className="relative min-h-[180px] md:min-h-[140px] mb-10">
+            <div className="relative min-h-[220px] sm:min-h-[180px] md:min-h-[140px] mb-10">
               {testimonials.map((t, i) => (
                 <p
                   key={i}

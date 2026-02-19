@@ -45,16 +45,16 @@ export default function HeroSection() {
           <p className="text-white/60 text-lg max-w-lg leading-relaxed font-light">
             We capture the raw emotion of weddings, the energy of live events, and the professional essence of corporate milestones. Timeless photography and cinematic film—all crafted with a signature edge.
           </p>
-          <div className="mt-12 flex gap-4">
+          <div className="mt-12 flex flex-col sm:flex-row gap-4">
             <a
-              href="#"
-              className="inline-flex items-center justify-center px-8 py-4 bg-brand-accent text-white text-xs font-bold uppercase tracking-widest transition-all duration-200 ease-out border-2 border-brand-accent shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-none hover:translate-x-1 hover:translate-y-1"
+              href="#work"
+              className="inline-flex items-center justify-center px-6 sm:px-8 py-4 bg-brand-accent text-white text-xs font-bold uppercase tracking-widest transition-all duration-200 ease-out border-2 border-brand-accent shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-none hover:translate-x-1 hover:translate-y-1"
             >
               Explore Portfolio
             </a>
             <a
-              href="#"
-              className="inline-flex items-center justify-center uppercase hover:border-brand-accent hover:text-brand-accent transition-all duration-200 text-xs font-bold text-white tracking-widest border-2 border-white/40 px-8 py-4 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.15)] hover:shadow-none hover:translate-x-1 hover:translate-y-1"
+              href="#services"
+              className="inline-flex items-center justify-center uppercase hover:border-brand-accent hover:text-brand-accent transition-all duration-200 text-xs font-bold text-white tracking-widest border-2 border-white/40 px-6 sm:px-8 py-4 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.15)] hover:shadow-none hover:translate-x-1 hover:translate-y-1"
             >
               View Pricing
             </a>
