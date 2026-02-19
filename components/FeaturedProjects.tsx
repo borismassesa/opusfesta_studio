@@ -123,22 +123,24 @@ export default function FeaturedProjects() {
 
       <div
         ref={setRef('clients-strip')}
-        className={`border-t border-white/10 py-10 overflow-hidden transition-all duration-700 ${
+        className={`border-t border-white/10 py-6 overflow-hidden transition-all duration-700 ${
           visibleItems.has('clients-strip')
             ? 'opacity-100'
             : 'opacity-0'
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
-            <span className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em] whitespace-nowrap shrink-0">
+        <div className="flex items-center gap-8">
+          <div className="shrink-0 pl-6 lg:pl-12">
+            <span className="text-[10px] font-bold text-white/50 uppercase tracking-[0.2em]">
               Featured In
             </span>
-            <div className="flex flex-wrap gap-x-10 gap-y-3">
-              {clients.map((client) => (
+          </div>
+          <div className="overflow-hidden flex-1">
+            <div className="flex animate-marquee whitespace-nowrap">
+              {[...clients, ...clients, ...clients].map((client, i) => (
                 <span
-                  key={client}
-                  className="text-sm font-bold text-white/20 uppercase tracking-widest hover:text-brand-accent transition-colors duration-300 cursor-default"
+                  key={`${client}-${i}`}
+                  className="text-sm font-bold text-white/40 uppercase tracking-[0.25em] mx-8 inline-block"
                 >
                   {client}
                 </span>
