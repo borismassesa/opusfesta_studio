@@ -22,7 +22,7 @@ export default function HeroSection() {
             muted
             loop
             playsInline
-            className="absolute top-0 right-0 w-full h-full object-cover opacity-50"
+            className="absolute top-0 right-0 w-full h-full object-cover opacity-70"
             style={{
               maskImage: 'linear-gradient(to right, transparent 10%, black 45%, black)',
               WebkitMaskImage: 'linear-gradient(to right, transparent 10%, black 45%, black)',
@@ -31,7 +31,7 @@ export default function HeroSection() {
             <source src="/videos/hero-bg.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-panel via-brand-panel/80 via-35% to-brand-panel/20 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-panel via-brand-panel/60 via-30% to-transparent pointer-events-none"></div>
       </div>
 
       <div className="lg:px-12 grid grid-cols-1 lg:grid-cols-12 w-full h-full max-w-[1920px] z-10 mr-auto ml-auto pt-20 pr-6 pb-20 pl-6 relative gap-x-8 gap-y-8 items-center">
