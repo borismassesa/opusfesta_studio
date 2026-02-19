@@ -89,7 +89,7 @@ export default function TestimonialsCarousel() {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-16 lg:gap-20 items-start">
+        <div className="grid grid-cols-1 xl:grid-cols-[1fr_360px] gap-16 xl:gap-20 items-start">
           <div>
             <span className="text-xs font-bold text-brand-accent tracking-widest uppercase font-mono mb-10 block">
               Testimonials
@@ -133,7 +133,7 @@ export default function TestimonialsCarousel() {
             </div>
           </div>
 
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <div className="space-y-0">
               {testimonials.map((t, i) => (
                 <button
@@ -171,7 +171,7 @@ export default function TestimonialsCarousel() {
             </div>
           </div>
 
-          <div className="flex gap-3 lg:hidden">
+          <div className="flex gap-3 xl:hidden">
             {testimonials.map((t, i) => (
               <button
                 key={i}
