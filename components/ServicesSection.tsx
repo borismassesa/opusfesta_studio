@@ -50,26 +50,26 @@ export default function ServicesSection() {
   );
 
   return (
-    <section className="py-24 relative z-10">
+    <section className="py-24 relative z-10 bg-brand-bg">
       <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-2 h-2 bg-brand-accent rounded-full animate-pulse shadow-[0_0_10px_rgba(125,211,252,0.5)]"></span>
-              <span className="text-xs font-bold text-slate-500 tracking-widest uppercase font-mono">
+              <span className="w-2 h-2 bg-brand-accent"></span>
+              <span className="text-xs font-bold text-neutral-500 tracking-widest uppercase font-mono">
                 Capabilities
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-white">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-brand-dark">
               FEATURED SERVICES
             </h2>
           </div>
           <div className="w-full md:w-auto">
             <a
               href="#"
-              className="inline-flex items-center justify-center gap-2 uppercase hover:border-white transition-colors text-xs font-bold text-white tracking-widest border-slate-700 border px-8 py-4"
+              className="inline-flex items-center justify-center gap-2 uppercase hover:border-brand-accent transition-colors text-xs font-bold text-brand-dark tracking-widest border-brand-border border-2 px-8 py-4"
             >
-              <span className="text-xs font-bold text-white tracking-widest uppercase group-hover:text-brand-accent transition-colors">
+              <span className="text-xs font-bold text-brand-dark tracking-widest uppercase group-hover:text-brand-accent transition-colors">
                 View Full Services
               </span>
               <svg
@@ -89,15 +89,15 @@ export default function ServicesSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-800 border border-slate-800">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-brand-border border-2 border-brand-border">
           {services.map((service) => (
             <div
               key={service.id}
-              className="group bg-brand-dark p-6 hover:bg-slate-900/50 transition-colors relative"
+              className="group bg-brand-bg p-6 hover:bg-brand-panel transition-colors relative"
             >
               <div className="aspect-[3/4] bg-brand-panel overflow-hidden relative mb-6">
                 <div className="z-20 flex flex-col gap-2 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0 opacity-0 absolute top-3 right-3 translate-x-2">
-                  <button className="w-8 h-8 bg-brand-dark text-white border border-slate-700 flex items-center justify-center hover:border-brand-accent hover:text-brand-accent transition-colors">
+                  <button className="w-8 h-8 bg-brand-bg text-brand-dark border-2 border-brand-border flex items-center justify-center hover:border-brand-accent hover:text-brand-accent transition-colors">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="14"
@@ -112,7 +112,7 @@ export default function ServicesSection() {
                       <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676a.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
                     </svg>
                   </button>
-                  <button className="w-8 h-8 bg-brand-dark text-white border border-slate-700 flex items-center justify-center hover:border-brand-accent hover:text-brand-accent transition-colors">
+                  <button className="w-8 h-8 bg-brand-bg text-brand-dark border-2 border-brand-border flex items-center justify-center hover:border-brand-accent hover:text-brand-accent transition-colors">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="14"
@@ -132,12 +132,12 @@ export default function ServicesSection() {
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 opacity-80 object-cover"
+                  className="group-hover:scale-105 transition-all duration-500 object-cover"
                 />
               </div>
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-[10px] font-mono text-slate-500 uppercase">
+                  <span className="text-[10px] font-mono text-neutral-500 uppercase">
                     Service {service.id}
                   </span>
                   <div className="flex gap-0.5 text-brand-accent">
@@ -147,25 +147,25 @@ export default function ServicesSection() {
                     <StarIcon />
                   </div>
                 </div>
-                <h3 className="text-sm font-bold text-white uppercase tracking-wide mb-1 group-hover:text-brand-accent transition-colors">
+                <h3 className="text-sm font-bold text-brand-dark uppercase tracking-wide mb-1 group-hover:text-brand-accent transition-colors">
                   {service.title}
                 </h3>
                 <div className="flex items-center justify-between mt-4">
                   <div className="flex gap-2 items-baseline">
                     <p
                       className={`text-sm font-mono font-bold ${
-                        service.oldPrice ? 'text-brand-accent' : 'text-slate-400'
+                        service.oldPrice ? 'text-brand-accent' : 'text-neutral-600'
                       }`}
                     >
                       {service.price}
                     </p>
                     {service.oldPrice && (
-                      <p className="text-xs font-mono text-slate-600 line-through">
+                      <p className="text-xs font-mono text-neutral-400 line-through">
                         {service.oldPrice}
                       </p>
                     )}
                   </div>
-                  <button className="text-[10px] font-bold uppercase tracking-widest text-white border-b border-brand-accent pb-0.5 hover:text-brand-accent transition-colors">
+                  <button className="text-[10px] font-bold uppercase tracking-widest text-brand-dark border-b-2 border-brand-accent pb-0.5 hover:text-brand-accent transition-colors">
                     Details
                   </button>
                 </div>

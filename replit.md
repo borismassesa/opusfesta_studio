@@ -33,6 +33,15 @@ npm run dev
 - **Supabase**: Used for image hosting (hoirqrkdgbmvpwutwuwj.supabase.co)
 - **UnicornStudio**: External script for visual effects
 
+## Design
+- **Theme**: Brutalist light theme with warm off-white backgrounds
+- **Palette**: brand-bg (#FAFAF8), brand-panel (#F0EDE8), brand-accent (#C45A3C terracotta), brand-dark (#0A0A0A)
+- **Style**: Bold typography, thick black borders, minimal decoration, high contrast
+
 ## Recent Changes
+- Redesigned entire site from dark to brutalist light theme
+- Updated color palette to warm off-white with terracotta accent
+- Renamed studio to Opusfesta Studio
+- Focused content on wedding, event, and corporate photography/videography
 - Configured Next.js to run on port 5000 with host 0.0.0.0
 - Added allowedDevOrigins for Replit proxy compatibility

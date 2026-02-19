@@ -1,21 +1,19 @@
 export default function MainFooter() {
   return (
-    <footer className="bg-brand-dark border-t border-slate-800 relative z-10">
+    <footer className="bg-brand-panel border-t-4 border-brand-border relative z-10">
       <div className="max-w-[1920px] mx-auto">
-        {/* Top CTA Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-slate-800">
-          {/* Left: Big CTA */}
-          <div className="p-12 lg:p-20 border-b lg:border-b-0 lg:border-r border-slate-800 flex flex-col justify-center min-h-[400px]">
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white leading-[0.9] mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 border-b-2 border-brand-border">
+          <div className="p-12 lg:p-20 border-b-2 lg:border-b-0 lg:border-r-2 border-brand-border flex flex-col justify-center min-h-[400px]">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-brand-dark leading-[0.9] mb-8">
               CAPTURE
               <br />
               <span className="text-transparent text-stroke">EVERY MOMENT.</span>
             </h2>
             <a
               href="#"
-              className="group inline-flex items-center gap-4 text-white hover:text-brand-accent transition-colors w-max"
+              className="group inline-flex items-center gap-4 text-brand-dark hover:text-brand-accent transition-colors w-max"
             >
-              <span className="text-xs font-bold uppercase tracking-widest border-b border-white group-hover:border-brand-accent pb-1">
+              <span className="text-xs font-bold uppercase tracking-widest border-b-2 border-brand-border group-hover:border-brand-accent pb-1">
                 Book Your Date
               </span>
               <svg
@@ -36,32 +34,31 @@ export default function MainFooter() {
             </a>
           </div>
 
-          {/* Right: Info & Contact */}
-          <div className="p-12 lg:p-20 flex flex-col justify-center bg-white/[0.02]">
-            <p className="text-slate-400 text-lg leading-relaxed max-w-md mb-12 font-light">
+          <div className="p-12 lg:p-20 flex flex-col justify-center bg-brand-bg">
+            <p className="text-neutral-600 text-lg leading-relaxed max-w-md mb-12 font-light">
               We partner with couples and companies to document stories that matter. Cinematic films and high-end photography for the moments you never want to forget.
             </p>
             <div className="space-y-8">
               <div>
-                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">
+                <p className="text-[10px] font-bold text-neutral-500 uppercase tracking-widest mb-2">
                   New Business
                 </p>
                 <a
                   href="mailto:hello@opusfesta.com"
-                  className="text-2xl md:text-3xl font-bold text-white hover:text-brand-accent transition-colors tracking-tight"
+                  className="text-2xl md:text-3xl font-bold text-brand-dark hover:text-brand-accent transition-colors tracking-tight"
                 >
                   hello@opusfesta.com
                 </a>
               </div>
 
               <div>
-                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4">
+                <p className="text-[10px] font-bold text-neutral-500 uppercase tracking-widest mb-4">
                   Connect
                 </p>
                 <div className="flex gap-3">
                   <a
                     href="#"
-                    className="w-10 h-10 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-white transition-colors bg-slate-900/50"
+                    className="w-10 h-10 border-2 border-brand-border flex items-center justify-center text-brand-dark hover:text-brand-accent hover:border-brand-accent transition-colors bg-brand-bg"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +78,7 @@ export default function MainFooter() {
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-white transition-colors bg-slate-900/50"
+                    className="w-10 h-10 border-2 border-brand-border flex items-center justify-center text-brand-dark hover:text-brand-accent hover:border-brand-accent transition-colors bg-brand-bg"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +96,7 @@ export default function MainFooter() {
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-white transition-colors bg-slate-900/50"
+                    className="w-10 h-10 border-2 border-brand-border flex items-center justify-center text-brand-dark hover:text-brand-accent hover:border-brand-accent transition-colors bg-brand-bg"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -123,11 +120,10 @@ export default function MainFooter() {
           </div>
         </div>
 
-        {/* Links Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-slate-800 border-b border-slate-800">
+        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-brand-border border-b-2 border-brand-border">
           <div className="p-8 lg:p-12">
-            <h4 className="text-xs font-bold text-white uppercase tracking-widest mb-6">Studio</h4>
-            <ul className="space-y-3 text-xs font-mono text-slate-500 uppercase tracking-wide">
+            <h4 className="text-xs font-bold text-brand-dark uppercase tracking-widest mb-6">Studio</h4>
+            <ul className="space-y-3 text-xs font-mono text-neutral-500 uppercase tracking-wide">
               <li>
                 <a href="#" className="hover:text-brand-accent transition-colors">
                   Work
@@ -151,8 +147,8 @@ export default function MainFooter() {
             </ul>
           </div>
           <div className="p-8 lg:p-12">
-            <h4 className="text-xs font-bold text-white uppercase tracking-widest mb-6">Social</h4>
-            <ul className="space-y-3 text-xs font-mono text-slate-500 uppercase tracking-wide">
+            <h4 className="text-xs font-bold text-brand-dark uppercase tracking-widest mb-6">Social</h4>
+            <ul className="space-y-3 text-xs font-mono text-neutral-500 uppercase tracking-wide">
               <li>
                 <a href="#" className="hover:text-brand-accent transition-colors">
                   Instagram
@@ -176,8 +172,8 @@ export default function MainFooter() {
             </ul>
           </div>
           <div className="p-8 lg:p-12">
-            <h4 className="text-xs font-bold text-white uppercase tracking-widest mb-6">Legal</h4>
-            <ul className="space-y-3 text-xs font-mono text-slate-500 uppercase tracking-wide">
+            <h4 className="text-xs font-bold text-brand-dark uppercase tracking-widest mb-6">Legal</h4>
+            <ul className="space-y-3 text-xs font-mono text-neutral-500 uppercase tracking-wide">
               <li>
                 <a href="#" className="hover:text-brand-accent transition-colors">
                   Privacy Policy
@@ -195,16 +191,16 @@ export default function MainFooter() {
               </li>
             </ul>
           </div>
-          <div className="p-8 lg:p-12 flex flex-col justify-between h-full bg-slate-900/20">
+          <div className="p-8 lg:p-12 flex flex-col justify-between h-full bg-brand-bg">
             <div className="mb-8">
-              <div className="w-10 h-10 border border-white/20 flex items-center justify-center font-bold text-white text-sm tracking-tighter mb-4">
+              <div className="w-10 h-10 border-2 border-brand-border flex items-center justify-center font-bold text-brand-dark text-sm tracking-tighter mb-4">
                 OS
               </div>
-              <p className="text-[10px] font-bold text-white uppercase leading-tight tracking-widest">
+              <p className="text-[10px] font-bold text-brand-dark uppercase leading-tight tracking-widest">
                 OPUSFESTA STUDIO London, UK
               </p>
             </div>
-            <p className="text-[10px] text-slate-600 font-mono">
+            <p className="text-[10px] text-neutral-400 font-mono">
               © 2024 Opusfesta Studio. All rights reserved.
             </p>
           </div>

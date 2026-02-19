@@ -9,9 +9,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'brand-dark': '#0a0a0f',
-        'brand-panel': '#13131a',
-        'brand-accent': '#7DD3FC',
+        'brand-dark': '#0A0A0A',
+        'brand-panel': '#F0EDE8',
+        'brand-accent': '#C45A3C',
+        'brand-bg': '#FAFAF8',
+        'brand-border': '#0A0A0A',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

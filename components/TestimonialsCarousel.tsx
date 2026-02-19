@@ -62,7 +62,7 @@ export default function TestimonialsCarousel() {
   };
 
   return (
-    <section className="py-32 relative border-t border-slate-800 bg-brand-dark z-10 overflow-hidden">
+    <section className="py-32 relative border-t-4 border-brand-border bg-brand-bg z-10 overflow-hidden">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -74,12 +74,11 @@ export default function TestimonialsCarousel() {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="mx-auto text-slate-600 mb-8"
+          className="mx-auto text-neutral-300 mb-8"
         >
           <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1a6 6 0 0 0 6-6V5a2 2 0 0 0-2-2zM5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1a6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
         </svg>
 
-        {/* Testimonials Container */}
         <div className="relative h-40 md:h-32 mb-12">
           {testimonials.map((testimonial, index) => (
             <div
@@ -88,14 +87,13 @@ export default function TestimonialsCarousel() {
                 currentTestimonial === index ? 'opacity-100' : 'opacity-0 hidden'
               }`}
             >
-              <p className="text-2xl md:text-3xl font-light text-slate-300 leading-relaxed tracking-tight">
+              <p className="text-2xl md:text-3xl font-light text-neutral-700 leading-relaxed tracking-tight">
                 &quot;{testimonial.quote}&quot;
               </p>
             </div>
           ))}
         </div>
 
-        {/* Author Info Container */}
         <div className="h-16">
           {testimonials.map((testimonial, index) => (
             <div
@@ -104,24 +102,23 @@ export default function TestimonialsCarousel() {
                 currentTestimonial === index ? 'opacity-100' : 'opacity-0 hidden'
               }`}
             >
-              <h4 className="text-sm font-semibold text-white uppercase tracking-widest">
+              <h4 className="text-sm font-semibold text-brand-dark uppercase tracking-widest">
                 {testimonial.author}
               </h4>
-              <p className="text-xs text-slate-500 font-mono mt-2">{testimonial.role}</p>
+              <p className="text-xs text-neutral-500 font-mono mt-2">{testimonial.role}</p>
             </div>
           ))}
         </div>
 
-        {/* Client Avatars */}
         <div className="flex justify-center gap-4 md:gap-6 mt-16">
           {testimonials.map((testimonial, index) => (
             <button
               key={index}
               onClick={() => goToTestimonial(index)}
-              className={`w-12 h-12 rounded-full border-2 overflow-hidden transition-all duration-300 ${
+              className={`w-12 h-12 border-2 overflow-hidden transition-all duration-300 ${
                 currentTestimonial === index
                   ? 'border-brand-accent'
-                  : 'border-slate-600 grayscale'
+                  : 'border-neutral-300 grayscale'
               }`}
             >
               <Image

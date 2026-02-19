@@ -7,13 +7,12 @@ interface HeaderProps {
 
 export default function Header({ onMenuToggle, onCartToggle }: HeaderProps) {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-slate-800">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-bg border-b-4 border-brand-border">
       <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
-          {/* Menu Toggle */}
           <button
             onClick={onMenuToggle}
-            className="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-brand-accent transition-colors"
+            className="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-brand-dark hover:text-brand-accent transition-colors"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -31,17 +30,15 @@ export default function Header({ onMenuToggle, onCartToggle }: HeaderProps) {
             <span className="hidden sm:inline">Menu</span>
           </button>
 
-          {/* Logo */}
           <a
             href="#"
-            className="w-12 h-12 border border-white/20 flex items-center justify-center font-bold text-white tracking-tighter hover:border-brand-accent hover:text-brand-accent transition-colors"
+            className="w-12 h-12 border-2 border-brand-border flex items-center justify-center font-bold text-brand-dark tracking-tighter hover:border-brand-accent hover:text-brand-accent transition-colors"
           >
-            TS
+            OS
           </a>
 
-          {/* Right Nav */}
           <div className="flex items-center gap-6">
-            <button className="text-slate-500 hover:text-white transition-colors">
+            <button className="text-brand-dark hover:text-brand-accent transition-colors">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -57,7 +54,7 @@ export default function Header({ onMenuToggle, onCartToggle }: HeaderProps) {
                 <circle cx="11" cy="11" r="8"></circle>
               </svg>
             </button>
-            <button className="text-slate-500 hover:text-white transition-colors hidden sm:block">
+            <button className="text-brand-dark hover:text-brand-accent transition-colors hidden sm:block">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -75,7 +72,7 @@ export default function Header({ onMenuToggle, onCartToggle }: HeaderProps) {
             </button>
             <button
               onClick={onCartToggle}
-              className="relative text-slate-500 hover:text-brand-accent transition-colors group"
+              className="relative text-brand-dark hover:text-brand-accent transition-colors group"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +89,7 @@ export default function Header({ onMenuToggle, onCartToggle }: HeaderProps) {
                 <circle cx="19" cy="21" r="1"></circle>
                 <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
               </svg>
-              <span className="-top-3 -right-2 text-white text-[10px] flex items-center justify-center font-bold w-4 h-4 rounded-sm absolute">
+              <span className="-top-3 -right-2 text-brand-dark text-[10px] flex items-center justify-center font-bold w-4 h-4 absolute">
                 1
               </span>
             </button>
