@@ -1,74 +1,145 @@
+'use client';
+
+import { useRef, useEffect, useState, useCallback } from 'react';
+
 export default function FeaturedProjects() {
-  const projects = [
-    {
-      id: '01',
-      category: 'Wedding Film',
-      title: 'A Highland Romance',
-      image:
-        'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/9df63a50-60c8-434f-b5f3-fc24be587c03_3840w.webp',
-    },
-    {
-      id: '02',
-      category: 'Event Photography',
-      title: 'Gala Night 2024',
-      image:
-        'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/b098c29a-9a00-4e0f-ae2c-2d810567550e_3840w.webp',
-    },
-    {
-      id: '03',
-      category: 'Corporate Film',
-      title: 'Vision 2030 Summit',
-      image:
-        'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c669426e-538c-46a9-b426-c5223887e80f_3840w.webp',
-    },
+  const [visibleItems, setVisibleItems] = useState<Set<string>>(new Set());
+  const refs = useRef<Map<string, HTMLElement>>(new Map());
+
+  const setRef = useCallback((id: string) => (el: HTMLElement | null) => {
+    if (el) {
+      refs.current.set(id, el);
+    }
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = Array.from(refs.current.entries()).find(
+              ([, el]) => el === entry.target
+            )?.[0];
+            if (id) {
+              setVisibleItems((prev) => new Set(prev).add(id));
+            }
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    refs.current.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  const stats = [
+    { id: 'stat-1', value: '200+', label: 'Projects Delivered' },
+    { id: 'stat-2', value: '8+', label: 'Years Experience' },
+    { id: 'stat-3', value: '4.9', label: 'Client Rating' },
+    { id: 'stat-4', value: '50+', label: 'Awards & Features' },
+  ];
+
+  const clients = [
+    'Vogue', 'Tatler', 'Harper\'s Bazaar', 'The Ritz', 'Claridge\'s',
+    'Harrods', 'Fortnum & Mason', 'Rolls-Royce',
   ];
 
   return (
-    <section className="border-b-4 border-brand-border bg-brand-bg relative z-10">
-      <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-border border-b-2 border-brand-border">
-        {projects.map((project) => (
+    <section className="relative z-10 bg-brand-dark border-b-4 border-brand-border">
+      <div className="grid grid-cols-2 lg:grid-cols-4 border-b border-white/10">
+        {stats.map((stat, index) => (
           <div
-            key={project.id}
-            className="group relative aspect-[4/5] md:aspect-auto md:h-[600px] overflow-hidden"
+            key={stat.id}
+            ref={setRef(stat.id)}
+            className={`py-12 lg:py-16 px-6 lg:px-12 text-center transition-all duration-700 ${
+              index < 3 ? 'border-r border-white/10' : ''
+            } ${
+              visibleItems.has(stat.id)
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-6'
+            }`}
+            style={{ transitionDelay: `${index * 120}ms` }}
           >
-            <div
-              className="bg-center transition-transform duration-700 group-hover:scale-105 opacity-100 bg-cover absolute top-0 right-0 bottom-0 left-0"
-              style={{ backgroundImage: `url('${project.image}')` }}
-            ></div>
-            <div className="bg-gradient-to-t from-white/80 via-transparent to-transparent absolute top-0 right-0 bottom-0 left-0"></div>
-
-            <div className="absolute top-6 left-6 z-20">
-              <span className="text-xs font-mono text-brand-dark border-2 border-brand-border px-2 py-1 bg-brand-bg">
-                {project.id}
-              </span>
+            <div className="text-4xl lg:text-5xl font-bold text-white font-mono tracking-tight mb-2">
+              {stat.value}
             </div>
-
-            <div className="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-              <p className="text-[10px] font-bold text-neutral-500 uppercase tracking-widest mb-2">
-                {project.category}
-              </p>
-              <h3 className="text-2xl font-bold text-brand-dark uppercase tracking-tight mb-4 group-hover:text-brand-accent transition-colors">
-                {project.title}
-              </h3>
-              <button className="flex items-center gap-2 text-xs font-bold text-brand-dark uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                View Case Study
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M5 12h14m-7-7l7 7l-7 7"></path>
-                </svg>
-              </button>
+            <div className="text-[10px] font-bold text-white/40 uppercase tracking-[0.2em]">
+              {stat.label}
             </div>
           </div>
         ))}
+      </div>
+
+      <div
+        ref={setRef('intro-block')}
+        className={`max-w-[1400px] mx-auto px-6 lg:px-12 py-20 lg:py-28 transition-all duration-700 ${
+          visibleItems.has('intro-block')
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-8'
+        }`}
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div>
+            <span className="text-xs font-bold text-brand-accent tracking-widest uppercase font-mono mb-6 block">
+              About the Studio
+            </span>
+            <h2 className="text-3xl lg:text-5xl font-bold text-white tracking-tighter leading-[1.1]">
+              We don&apos;t just document moments — we craft visual stories that live forever.
+            </h2>
+          </div>
+          <div className="lg:pt-10">
+            <p className="text-white/50 text-lg leading-relaxed font-light mb-10">
+              OpusFesta Studio is a team of filmmakers, photographers, and creative directors who believe every milestone deserves a cinematic treatment. From intimate elopements to 500-guest galas, we bring the same obsessive attention to light, composition, and narrative.
+            </p>
+            <a
+              href="#"
+              className="inline-flex items-center gap-3 text-xs font-bold text-white uppercase tracking-widest px-6 py-3 border-2 border-white/30 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.15)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 hover:border-brand-accent hover:text-brand-accent transition-all duration-200"
+            >
+              Our Story
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14m-7-7l7 7l-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        ref={setRef('clients-strip')}
+        className={`border-t border-white/10 py-10 overflow-hidden transition-all duration-700 ${
+          visibleItems.has('clients-strip')
+            ? 'opacity-100'
+            : 'opacity-0'
+        }`}
+      >
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
+            <span className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em] whitespace-nowrap shrink-0">
+              Featured In
+            </span>
+            <div className="flex flex-wrap gap-x-10 gap-y-3">
+              {clients.map((client) => (
+                <span
+                  key={client}
+                  className="text-sm font-bold text-white/20 uppercase tracking-widest hover:text-brand-accent transition-colors duration-300 cursor-default"
+                >
+                  {client}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
