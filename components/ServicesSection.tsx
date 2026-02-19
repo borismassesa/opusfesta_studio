@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useEffect, useState, useCallback } from 'react';
+import Image from 'next/image';
 
 export default function ServicesSection() {
   const [visibleItems, setVisibleItems] = useState<Set<string>>(new Set());
@@ -42,6 +43,7 @@ export default function ServicesSection() {
       description:
         'Full-day coverage capturing every emotion, from the quiet preparations to the last dance. Delivered as a cinematic short film and full ceremony edit.',
       price: 'From £2,500',
+      image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/048e0a68-a97c-46dd-aed4-734f98009a4c_3840w.webp',
       includes: ['Cinematic Highlight Film', 'Full Ceremony Edit', 'Drone Coverage'],
     },
     {
@@ -50,6 +52,7 @@ export default function ServicesSection() {
       description:
         'High-energy event coverage that captures the atmosphere, the people, and the moments in between. Perfect for galas, launches, and private celebrations.',
       price: 'From £1,200',
+      image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ad97e439-6931-4e5e-bcf3-b69be4018905_3840w.webp',
       includes: ['300+ Edited Photos', 'Same-Day Previews', 'Online Gallery'],
     },
     {
@@ -58,6 +61,7 @@ export default function ServicesSection() {
       description:
         'Professional documentation of your company\'s key moments — conferences, team retreats, product launches, and annual celebrations.',
       price: 'From £3,000',
+      image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/52b4be58-0ae9-4f19-88ed-d742fc1abef3_3840w.jpg',
       includes: ['Photo & Video Package', 'Brand-Ready Edits', 'Social Media Cuts'],
     },
     {
@@ -66,6 +70,7 @@ export default function ServicesSection() {
       description:
         'Concept-to-delivery commercial production for brands that want to stand out. We handle creative direction, filming, and post-production.',
       price: 'From £5,000',
+      image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/71087bc3-4cb0-48eb-b49a-6a1587f575d7_3840w.jpg',
       includes: ['Creative Direction', '4K Production', 'Colour Grading'],
     },
     {
@@ -74,6 +79,7 @@ export default function ServicesSection() {
       description:
         'Visually striking music videos that match the energy and emotion of your sound. From concept through final colour grade.',
       price: 'From £3,500',
+      image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/74ce626d-5eba-470d-a4e4-159b9c6cad3c_3840w.webp',
       includes: ['Storyboarding', 'Multi-Location Shoot', 'Post-Production'],
     },
     {
@@ -82,6 +88,7 @@ export default function ServicesSection() {
       description:
         'Ongoing visual content for brands that need a consistent, high-quality presence across digital platforms and campaigns.',
       price: 'From £1,800',
+      image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/bb37e13b-1cf2-4a1f-ad35-d5499d2a18a2_3840w.webp',
       includes: ['Monthly Content Plan', 'Reels & Shorts', 'Product Photography'],
     },
   ];
@@ -183,44 +190,58 @@ export default function ServicesSection() {
                 >
                   <div className="overflow-hidden">
                   <div className="pb-10 pl-[84px] lg:pl-[130px] pr-6">
-                    <p className="text-neutral-600 leading-relaxed max-w-2xl mb-8 text-base lg:text-lg font-light">
-                      {service.description}
-                    </p>
+                    <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-8 lg:gap-12">
+                      <div>
+                        <p className="text-neutral-600 leading-relaxed max-w-2xl mb-8 text-base lg:text-lg font-light">
+                          {service.description}
+                        </p>
 
-                    <div className="flex flex-wrap gap-2 mb-8">
-                      {service.includes.map((item) => (
-                        <span
-                          key={item}
-                          className="text-[11px] font-mono text-brand-dark border-2 border-brand-border px-4 py-2 uppercase tracking-wide"
-                        >
-                          {item}
-                        </span>
-                      ))}
-                    </div>
+                        <div className="flex flex-wrap gap-2 mb-8">
+                          {service.includes.map((item) => (
+                            <span
+                              key={item}
+                              className="text-[11px] font-mono text-brand-dark border-2 border-brand-border px-4 py-2 uppercase tracking-wide"
+                            >
+                              {item}
+                            </span>
+                          ))}
+                        </div>
 
-                    <div className="flex items-center gap-6">
-                      <span className="text-xl font-bold text-brand-dark font-mono tracking-tight md:hidden">
-                        {service.price}
-                      </span>
-                      <a
-                        href="#"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-brand-dark text-white text-xs font-bold uppercase tracking-widest border-2 border-brand-dark shadow-brutal-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1 hover:bg-brand-accent hover:border-brand-accent transition-all duration-200"
-                      >
-                        Enquire Now
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="14"
-                          height="14"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M5 12h14m-7-7l7 7l-7 7"></path>
-                        </svg>
-                      </a>
+                        <div className="flex items-center gap-6">
+                          <span className="text-xl font-bold text-brand-dark font-mono tracking-tight md:hidden">
+                            {service.price}
+                          </span>
+                          <a
+                            href="#"
+                            className="inline-flex items-center gap-2 px-6 py-3 bg-brand-dark text-white text-xs font-bold uppercase tracking-widest border-2 border-brand-dark shadow-brutal-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1 hover:bg-brand-accent hover:border-brand-accent transition-all duration-200"
+                          >
+                            Enquire Now
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14"
+                              height="14"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <path d="M5 12h14m-7-7l7 7l-7 7"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="relative border-4 border-brand-border shadow-brutal overflow-hidden aspect-[4/3]">
+                        <Image
+                          src={service.image}
+                          alt={service.title}
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 380px"
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
                   </div>
                   </div>
