@@ -36,9 +36,10 @@ export default function HeroSection() {
             Now Booking Weddings & Events 2025
           </span>
           <h1 className="text-6xl md:text-8xl lg:text-[9rem] leading-[0.9] font-bold tracking-tighter text-white mb-8">
-            CINEMATIC
+            <span className="inline-block hover:text-brand-accent hover:-translate-y-1 transition-all duration-300 cursor-default">CINEMATIC</span>
             <br />
-            <span className="text-stroke-light text-transparent">VISUAL STORIES</span>
+            <span className="text-stroke-light text-transparent hover:text-brand-accent hover:-translate-y-1 transition-all duration-300 cursor-default inline-block">VISUAL</span>{' '}
+            <span className="text-stroke-light text-transparent hover:text-brand-accent hover:-translate-y-1 transition-all duration-300 cursor-default inline-block">STORIES</span>
           </h1>
           <div className="w-24 h-1 bg-brand-accent mb-8"></div>
           <p className="text-white/60 text-lg max-w-lg leading-relaxed font-light">
