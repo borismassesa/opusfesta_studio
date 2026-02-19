@@ -47,28 +47,34 @@ export default function FeaturedProjects() {
 
   return (
     <section className="relative z-10 bg-brand-dark border-b-4 border-brand-border">
-      <div className="grid grid-cols-2 lg:grid-cols-4 border-b border-white/10">
-        {stats.map((stat, index) => (
-          <div
-            key={stat.id}
-            ref={setRef(stat.id)}
-            className={`py-12 lg:py-16 px-6 lg:px-12 text-center transition-all duration-700 ${
-              index < 3 ? 'border-r border-white/10' : ''
-            } ${
-              visibleItems.has(stat.id)
-                ? 'opacity-100 translate-y-0'
-                : 'opacity-0 translate-y-6'
-            }`}
-            style={{ transitionDelay: `${index * 120}ms` }}
-          >
-            <div className="text-4xl lg:text-5xl font-bold text-white font-mono tracking-tight mb-2">
-              {stat.value}
+      <div className="grid grid-cols-2 md:grid-cols-4 border-b border-white/10">
+        {stats.map((stat, index) => {
+          const borders = [
+            'border-r border-b md:border-b-0 border-white/10',
+            'border-b md:border-b-0 md:border-r border-white/10',
+            'border-r md:border-r border-white/10',
+            '',
+          ];
+          return (
+            <div
+              key={stat.id}
+              ref={setRef(stat.id)}
+              className={`py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-12 text-center transition-all duration-700 ${borders[index]} ${
+                visibleItems.has(stat.id)
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-6'
+              }`}
+              style={{ transitionDelay: `${index * 120}ms` }}
+            >
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-mono tracking-tight mb-1 sm:mb-2">
+                {stat.value}
+              </div>
+              <div className="text-[9px] sm:text-[10px] font-bold text-white/40 uppercase tracking-[0.15em] sm:tracking-[0.2em]">
+                {stat.label}
+              </div>
             </div>
-            <div className="text-[10px] font-bold text-white/40 uppercase tracking-[0.2em]">
-              {stat.label}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       <div
