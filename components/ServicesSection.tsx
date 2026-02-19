@@ -3,171 +3,167 @@ import Image from 'next/image';
 export default function ServicesSection() {
   const services = [
     {
-      id: '001',
+      id: '01',
       title: 'Wedding Cinema',
+      description:
+        'Full-day coverage capturing every emotion, from the quiet preparations to the last dance. Delivered as a cinematic short film and full ceremony edit.',
       price: 'From £2,500',
       image:
         'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/048e0a68-a97c-46dd-aed4-734f98009a4c_3840w.webp',
+      includes: ['Cinematic Highlight Film', 'Full Ceremony Edit', 'Drone Coverage'],
     },
     {
-      id: '002',
+      id: '02',
       title: 'Event Photography',
+      description:
+        'High-energy event coverage that captures the atmosphere, the people, and the moments in between. Perfect for galas, launches, and private celebrations.',
       price: 'From £1,200',
-      oldPrice: '£1,500',
       image:
         'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ad97e439-6931-4e5e-bcf3-b69be4018905_3840w.webp',
+      includes: ['300+ Edited Photos', 'Same-Day Previews', 'Online Gallery'],
     },
     {
-      id: '003',
+      id: '03',
       title: 'Corporate Milestones',
+      description:
+        'Professional documentation of your company\'s key moments — conferences, team retreats, product launches, and annual celebrations.',
       price: 'From £3,000',
       image:
         'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/52b4be58-0ae9-4f19-88ed-d742fc1abef3_3840w.jpg',
+      includes: ['Photo & Video Package', 'Brand-Ready Edits', 'Social Media Cuts'],
     },
     {
-      id: '004',
+      id: '04',
       title: 'Commercial Ads',
+      description:
+        'Concept-to-delivery commercial production for brands that want to stand out. We handle creative direction, filming, and post-production.',
       price: 'From £5,000',
       image:
         'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/71087bc3-4cb0-48eb-b49a-6a1587f575d7_3840w.jpg',
+      includes: ['Creative Direction', '4K Production', 'Colour Grading'],
     },
   ];
-
-  const StarIcon = () => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="10"
-      height="10"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"></path>
-    </svg>
-  );
 
   return (
     <section className="py-24 relative z-10 bg-brand-bg">
       <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6 border-b-4 border-brand-border pb-8">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <span className="w-2 h-2 bg-brand-accent"></span>
-              <span className="text-xs font-bold text-neutral-500 tracking-widest uppercase font-mono">
-                Capabilities
-              </span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-brand-dark">
-              FEATURED SERVICES
+            <span className="text-xs font-bold text-brand-accent tracking-widest uppercase font-mono mb-4 block">
+              What We Do
+            </span>
+            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-brand-dark">
+              SERVICES
             </h2>
           </div>
-          <div className="w-full md:w-auto">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center gap-2 uppercase hover:border-brand-accent transition-colors text-xs font-bold text-brand-dark tracking-widest border-brand-border border-2 px-8 py-4"
+          <a
+            href="#"
+            className="group inline-flex items-center gap-3 text-xs font-bold text-brand-dark uppercase tracking-widest border-b-2 border-brand-border pb-2 hover:border-brand-accent hover:text-brand-accent transition-colors"
+          >
+            View All Services
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="group-hover:translate-x-1 transition-transform"
             >
-              <span className="text-xs font-bold text-brand-dark tracking-widest uppercase group-hover:text-brand-accent transition-colors">
-                View Full Services
-              </span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M5 12h14m-7-7l7 7l-7 7"></path>
-              </svg>
-            </a>
-          </div>
+              <path d="M5 12h14m-7-7l7 7l-7 7"></path>
+            </svg>
+          </a>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-brand-border border-2 border-brand-border">
-          {services.map((service) => (
+        <div className="space-y-0">
+          {services.map((service, index) => (
             <div
               key={service.id}
-              className="group bg-brand-bg p-6 hover:bg-brand-panel transition-colors relative"
+              className={`group grid grid-cols-1 lg:grid-cols-2 border-4 border-brand-border ${
+                index > 0 ? '-mt-1' : ''
+              }`}
             >
-              <div className="aspect-[3/4] bg-brand-panel overflow-hidden relative mb-6">
-                <div className="z-20 flex flex-col gap-2 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0 opacity-0 absolute top-3 right-3 translate-x-2">
-                  <button className="w-8 h-8 bg-brand-bg text-brand-dark border-2 border-brand-border flex items-center justify-center hover:border-brand-accent hover:text-brand-accent transition-colors">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676a.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
-                    </svg>
-                  </button>
-                  <button className="w-8 h-8 bg-brand-bg text-brand-dark border-2 border-brand-border flex items-center justify-center hover:border-brand-accent hover:text-brand-accent transition-colors">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M15 3h6v6m0-6l-7 7M3 21l7-7m-1 7H3v-6"></path>
-                    </svg>
-                  </button>
-                </div>
+              <div
+                className={`relative aspect-[16/10] lg:aspect-auto lg:min-h-[450px] overflow-hidden ${
+                  index % 2 === 1 ? 'lg:order-2' : ''
+                }`}
+              >
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="group-hover:scale-105 transition-all duration-500 object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
+                <div className="absolute top-6 left-6 z-10">
+                  <span className="text-7xl lg:text-8xl font-bold text-white/20 font-mono leading-none">
+                    {service.id}
+                  </span>
+                </div>
               </div>
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-[10px] font-mono text-neutral-500 uppercase">
+
+              <div
+                className={`flex flex-col justify-center p-10 lg:p-16 bg-brand-bg group-hover:bg-brand-panel transition-colors ${
+                  index % 2 === 1 ? 'lg:order-1' : ''
+                }`}
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="w-8 h-[2px] bg-brand-accent"></span>
+                  <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest">
                     Service {service.id}
                   </span>
-                  <div className="flex gap-0.5 text-brand-accent">
-                    <StarIcon />
-                    <StarIcon />
-                    <StarIcon />
-                    <StarIcon />
-                  </div>
                 </div>
-                <h3 className="text-sm font-bold text-brand-dark uppercase tracking-wide mb-1 group-hover:text-brand-accent transition-colors">
+
+                <h3 className="text-3xl lg:text-5xl font-bold text-brand-dark uppercase tracking-tighter mb-6 group-hover:text-brand-accent transition-colors">
                   {service.title}
                 </h3>
-                <div className="flex items-center justify-between mt-4">
-                  <div className="flex gap-2 items-baseline">
-                    <p
-                      className={`text-sm font-mono font-bold ${
-                        service.oldPrice ? 'text-brand-accent' : 'text-neutral-600'
-                      }`}
-                    >
-                      {service.price}
-                    </p>
-                    {service.oldPrice && (
-                      <p className="text-xs font-mono text-neutral-400 line-through">
-                        {service.oldPrice}
-                      </p>
-                    )}
+
+                <p className="text-neutral-600 leading-relaxed mb-8 max-w-md font-light">
+                  {service.description}
+                </p>
+
+                <div className="mb-10">
+                  <p className="text-[10px] font-bold text-neutral-500 uppercase tracking-widest mb-3">
+                    Includes
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {service.includes.map((item) => (
+                      <span
+                        key={item}
+                        className="text-[11px] font-mono text-brand-dark border-2 border-brand-border px-3 py-1.5 uppercase tracking-wide"
+                      >
+                        {item}
+                      </span>
+                    ))}
                   </div>
-                  <button className="text-[10px] font-bold uppercase tracking-widest text-brand-dark border-b-2 border-brand-accent pb-0.5 hover:text-brand-accent transition-colors">
-                    Details
-                  </button>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold text-brand-dark font-mono tracking-tight">
+                    {service.price}
+                  </span>
+                  <a
+                    href="#"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-brand-dark text-white text-xs font-bold uppercase tracking-widest hover:bg-brand-accent transition-colors"
+                  >
+                    Enquire
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M5 12h14m-7-7l7 7l-7 7"></path>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
