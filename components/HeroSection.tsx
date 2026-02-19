@@ -1,18 +1,37 @@
+'use client';
+
+import { useRef, useEffect } from 'react';
+
 export default function HeroSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {});
+    }
+  }, []);
+
   return (
     <section className="relative min-h-screen pt-20 flex flex-col justify-center overflow-hidden border-b-4 border-brand-border">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-brand-panel"></div>
-        <div
-          className="absolute top-0 right-0 w-3/4 h-3/4 bg-cover bg-center opacity-60"
-          style={{
-            backgroundImage:
-              "url('https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/626b9891-8e97-414f-a0f1-7c1a223f78de_3840w.webp')",
-            maskImage: 'linear-gradient(to right, transparent, black 40%, black)',
-            WebkitMaskImage: 'linear-gradient(to right, transparent, black 40%, black)',
-          }}
-        ></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-panel via-brand-panel/90 via-40% to-transparent pointer-events-none"></div>
+        <div className="absolute inset-0 overflow-hidden">
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute top-0 right-0 w-full h-full object-cover opacity-50"
+            style={{
+              maskImage: 'linear-gradient(to right, transparent 10%, black 45%, black)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent 10%, black 45%, black)',
+            }}
+          >
+            <source src="/videos/hero-bg.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-panel via-brand-panel/80 via-35% to-brand-panel/20 pointer-events-none"></div>
       </div>
 
       <div className="lg:px-12 grid grid-cols-1 lg:grid-cols-12 w-full h-full max-w-[1920px] z-10 mr-auto ml-auto pt-20 pr-6 pb-20 pl-6 relative gap-x-8 gap-y-8 items-center">
