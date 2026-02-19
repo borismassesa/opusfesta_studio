@@ -71,22 +71,6 @@ export default function VideoLightboxSection() {
             </span>
           </div>
 
-          <div className="flex items-center gap-6 mt-12 pt-8 border-t border-white/10">
-            <div>
-              <div className="text-2xl font-bold text-white font-mono tracking-tight">200+</div>
-              <div className="text-[9px] text-white/30 uppercase tracking-widest font-bold mt-1">Projects</div>
-            </div>
-            <div className="w-px h-10 bg-white/10"></div>
-            <div>
-              <div className="text-2xl font-bold text-white font-mono tracking-tight">4K</div>
-              <div className="text-[9px] text-white/30 uppercase tracking-widest font-bold mt-1">Cinema</div>
-            </div>
-            <div className="w-px h-10 bg-white/10"></div>
-            <div>
-              <div className="text-2xl font-bold text-white font-mono tracking-tight">50+</div>
-              <div className="text-[9px] text-white/30 uppercase tracking-widest font-bold mt-1">Awards</div>
-            </div>
-          </div>
         </div>
 
         <div
