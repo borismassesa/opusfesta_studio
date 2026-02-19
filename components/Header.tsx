@@ -12,7 +12,7 @@ export default function Header({ onMenuToggle, onCartToggle }: HeaderProps) {
         <div className="flex items-center justify-between h-20">
           <button
             onClick={onMenuToggle}
-            className="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-brand-dark hover:text-brand-accent transition-colors"
+            className="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-brand-dark hover:text-brand-accent transition-all duration-200 px-3 py-2 border-2 border-brand-dark shadow-brutal-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -32,13 +32,13 @@ export default function Header({ onMenuToggle, onCartToggle }: HeaderProps) {
 
           <a
             href="#"
-            className="px-5 h-12 border-4 border-brand-dark bg-brand-dark text-white flex items-center justify-center font-black text-sm uppercase tracking-widest hover:bg-brand-accent hover:border-brand-accent transition-colors whitespace-nowrap"
+            className="px-5 h-12 border-4 border-brand-dark bg-brand-dark text-white flex items-center justify-center font-black text-sm uppercase tracking-widest hover:bg-brand-accent hover:border-brand-accent transition-all duration-200 whitespace-nowrap shadow-brutal-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1"
           >
             OPUSFESTA
           </a>
 
           <div className="flex items-center gap-6">
-            <button className="text-brand-dark hover:text-brand-accent transition-colors">
+            <button className="text-brand-dark hover:text-brand-accent transition-all duration-200 p-2 border-2 border-brand-dark shadow-brutal-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -54,7 +54,7 @@ export default function Header({ onMenuToggle, onCartToggle }: HeaderProps) {
                 <circle cx="11" cy="11" r="8"></circle>
               </svg>
             </button>
-            <button className="text-brand-dark hover:text-brand-accent transition-colors hidden sm:block">
+            <button className="text-brand-dark hover:text-brand-accent transition-all duration-200 hidden sm:block p-2 border-2 border-brand-dark shadow-brutal-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -72,7 +72,7 @@ export default function Header({ onMenuToggle, onCartToggle }: HeaderProps) {
             </button>
             <button
               onClick={onCartToggle}
-              className="relative text-brand-dark hover:text-brand-accent transition-colors group"
+              className="relative text-brand-dark hover:text-brand-accent transition-all duration-200 group p-2 border-2 border-brand-dark shadow-brutal-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -4,11 +4,21 @@
 
 :root {
   color-scheme: light;
+  --background: #FAFAF8;
+  --foreground: #0A0A0A;
+  --primary: #C45A3C;
+  --primary-foreground: #FFFFFF;
+  --border: #0A0A0A;
+  --radius: 0px;
 }
 
 body {
   @apply bg-brand-bg text-neutral-800 antialiased overflow-x-hidden;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans), 'DM Sans', sans-serif;
+}
+
+* {
+  border-radius: 0 !important;
 }
 
 .text-stroke {

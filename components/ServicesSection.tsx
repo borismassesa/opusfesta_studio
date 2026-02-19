@@ -99,7 +99,7 @@ export default function ServicesSection() {
           </div>
           <a
             href="#"
-            className="group inline-flex items-center gap-3 text-xs font-bold text-brand-dark uppercase tracking-widest border-b-2 border-brand-border pb-2 hover:border-brand-accent hover:text-brand-accent transition-colors"
+            className="group inline-flex items-center gap-3 text-xs font-bold text-brand-dark uppercase tracking-widest px-5 py-3 border-2 border-brand-dark shadow-brutal-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1 hover:bg-brand-accent hover:text-white hover:border-brand-accent transition-all duration-200"
           >
             View All Services
             <svg
@@ -221,7 +221,7 @@ export default function ServicesSection() {
                     </span>
                     <a
                       href="#"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-brand-dark text-white text-xs font-bold uppercase tracking-widest hover:bg-brand-accent transition-colors"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-brand-dark text-white text-xs font-bold uppercase tracking-widest border-2 border-brand-dark shadow-brutal-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1 hover:bg-brand-accent hover:border-brand-accent transition-all duration-200"
                     >
                       Enquire
                       <svg
