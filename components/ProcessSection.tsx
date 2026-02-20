@@ -204,9 +204,6 @@ export default function ProcessSection() {
                   : 'opacity-0 translate-y-8'
               }`}
             >
-              <div className="absolute top-6 right-8 text-[180px] xl:text-[220px] font-bold font-mono text-white/[0.03] leading-none select-none pointer-events-none">
-                {steps[activeStep].number}
-              </div>
 
               <div className="relative z-10 p-8 lg:p-10 xl:p-14 flex items-start gap-8 lg:gap-10 xl:gap-16">
                 <div className="w-16 h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24 border-4 border-white/20 flex items-center justify-center text-white/60 shrink-0">

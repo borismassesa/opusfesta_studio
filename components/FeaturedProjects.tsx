@@ -46,7 +46,7 @@ export default function FeaturedProjects() {
   ];
 
   return (
-    <section className="relative z-10 bg-brand-dark border-b-4 border-brand-border">
+    <section className="relative z-10 bg-brand-dark">
       <div className="grid grid-cols-2 md:grid-cols-4 border-b border-white/10">
         {stats.map((stat, index) => {
           const borders = [
@@ -78,6 +78,36 @@ export default function FeaturedProjects() {
       </div>
 
       <div
+        ref={setRef('clients-strip')}
+        className={`bg-brand-dark py-8 sm:py-10 overflow-hidden transition-all duration-700 ${
+          visibleItems.has('clients-strip')
+            ? 'opacity-100'
+            : 'opacity-0'
+        }`}
+      >
+        <div className="flex items-center gap-8">
+          <div className="shrink-0 pl-6 lg:pl-12">
+            <span className="text-[10px] font-bold text-white/50 uppercase tracking-[0.2em]">
+              Featured In
+            </span>
+          </div>
+          <div className="h-4 w-px bg-brand-accent/40 hidden sm:block"></div>
+          <div className="overflow-hidden flex-1">
+            <div className="flex animate-marquee whitespace-nowrap">
+              {[...clients, ...clients, ...clients].map((client, i) => (
+                <span
+                  key={`${client}-${i}`}
+                  className="text-xs sm:text-sm font-semibold text-white/30 uppercase tracking-[0.25em] mx-6 sm:mx-10 inline-block"
+                >
+                  {client}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
         ref={setRef('intro-block')}
         className={`max-w-[1400px] mx-auto px-6 lg:px-12 py-20 lg:py-28 transition-all duration-700 ${
           visibleItems.has('intro-block')
@@ -100,7 +130,7 @@ export default function FeaturedProjects() {
             </p>
             <a
               href="#"
-              className="inline-flex items-center gap-3 text-xs font-bold text-white uppercase tracking-widest px-6 py-3 border-2 border-white/30 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.15)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 hover:border-brand-accent hover:text-brand-accent transition-all duration-200"
+              className="inline-flex items-center gap-3 text-xs font-bold text-white uppercase tracking-widest px-6 py-3 border border-white/30 hover:border-brand-accent hover:text-brand-accent transition-all duration-300"
             >
               Our Story
               <svg
@@ -117,35 +147,6 @@ export default function FeaturedProjects() {
                 <path d="M5 12h14m-7-7l7 7l-7 7"></path>
               </svg>
             </a>
-          </div>
-        </div>
-      </div>
-
-      <div
-        ref={setRef('clients-strip')}
-        className={`border-t border-white/10 py-6 overflow-hidden transition-all duration-700 ${
-          visibleItems.has('clients-strip')
-            ? 'opacity-100'
-            : 'opacity-0'
-        }`}
-      >
-        <div className="flex items-center gap-8">
-          <div className="shrink-0 pl-6 lg:pl-12">
-            <span className="text-[10px] font-bold text-white/50 uppercase tracking-[0.2em]">
-              Featured In
-            </span>
-          </div>
-          <div className="overflow-hidden flex-1">
-            <div className="flex animate-marquee whitespace-nowrap">
-              {[...clients, ...clients, ...clients].map((client, i) => (
-                <span
-                  key={`${client}-${i}`}
-                  className="text-sm font-bold text-white/40 uppercase tracking-[0.25em] mx-8 inline-block"
-                >
-                  {client}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
       </div>

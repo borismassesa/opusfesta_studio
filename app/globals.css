@@ -4,35 +4,42 @@
 
 :root {
   color-scheme: light;
-  --background: #FAFAF8;
-  --foreground: #0A0A0A;
-  --primary: #C45A3C;
+  --background: #F8F9FA;
+  --foreground: #171717;
+  --primary: #6F3393;
+  --secondary: #591C7D;
+  --accent: #D0B1D4;
+  --muted-foreground: #7E7383;
   --primary-foreground: #FFFFFF;
-  --border: #0A0A0A;
+  --border: #171717;
   --radius: 0px;
 }
 
 body {
-  @apply bg-brand-bg text-neutral-800 antialiased overflow-x-hidden;
+  @apply bg-brand-bg text-brand-dark antialiased overflow-x-hidden;
   font-family: var(--font-sans), 'DM Sans', sans-serif;
 }
 
-* {
+*:not(.rounded-full) {
   border-radius: 0 !important;
 }
 
+.avatar-circle {
+  border-radius: 9999px !important;
+}
+
 .text-stroke {
-  -webkit-text-stroke: 2px #0A0A0A;
+  -webkit-text-stroke: 2px #171717;
   color: transparent;
   transition: color 0.3s ease;
 }
 
 .text-stroke:hover {
-  color: #C45A3C;
+  color: #6F3393;
 }
 
 .text-stroke-accent {
-  -webkit-text-stroke: 2px #C45A3C;
+  -webkit-text-stroke: 2px #6F3393;
   color: transparent;
 }
 
@@ -42,8 +49,8 @@ body {
 }
 
 ::selection {
-  background-color: #C45A3C;
-  color: #FAFAF8;
+  background-color: #6F3393;
+  color: #F8F9FA;
 }
 
 html {

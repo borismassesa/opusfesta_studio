@@ -19,14 +19,14 @@ export default function MainFooter() {
 
   return (
     <footer id="contact" ref={footerRef} className="bg-brand-dark relative z-10 overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none select-none">
-        <div className="absolute -bottom-20 -right-20 text-[300px] sm:text-[400px] lg:text-[500px] font-bold text-white/[0.02] leading-none tracking-tighter">
-          OF
+      <div className="absolute inset-0 flex items-end justify-center pointer-events-none select-none">
+        <div className="text-center text-[40px] sm:text-[70px] md:text-[100px] lg:text-[140px] xl:text-[180px] font-bold text-white/[0.04] leading-none tracking-tighter pb-6 sm:pb-8 lg:pb-10">
+          OpusFesta Studio
         </div>
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
-        <div className={`py-20 lg:py-28 border-b border-white/10 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`py-20 lg:py-28 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
             <div>
               <span className="text-xs font-bold text-brand-accent tracking-widest uppercase font-mono mb-8 block">
@@ -113,16 +113,7 @@ export default function MainFooter() {
         </div>
 
         <div className={`py-10 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
-              <div className="px-4 h-10 border-4 border-white/20 bg-transparent text-white inline-flex items-center justify-center font-black text-xs uppercase tracking-widest">
-                OpusFesta — Studio
-              </div>
-              <p className="text-[10px] text-white/30 font-mono uppercase tracking-widest">
-                Dar es Salaam, Tanzania
-              </p>
-            </div>
-
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <nav className="flex flex-wrap gap-x-6 gap-y-2">
               <a href="#work" className="text-[10px] font-mono text-white/30 uppercase tracking-widest hover:text-brand-accent transition-colors">
                 Work
@@ -140,12 +131,11 @@ export default function MainFooter() {
                 FAQ
               </a>
             </nav>
-          </div>
 
-          <div className="mt-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <p className="text-[10px] text-white/20 font-mono tracking-wide">
               &copy; {new Date().getFullYear()} OpusFesta Studio. All rights reserved.
             </p>
+
             <div className="flex gap-6">
               <a href="#" className="text-[10px] text-white/20 font-mono hover:text-white/50 transition-colors tracking-wide">
                 Privacy Policy

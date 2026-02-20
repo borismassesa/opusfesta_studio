@@ -9,11 +9,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'brand-dark': '#0A0A0A',
-        'brand-panel': '#F0EDE8',
-        'brand-accent': '#C45A3C',
-        'brand-bg': '#FAFAF8',
-        'brand-border': '#0A0A0A',
+        'brand-dark': '#171717',
+        'brand-panel': '#D0B1D4',
+        'brand-accent': '#6F3393',
+        'brand-secondary': '#591C7D',
+        'brand-bg': '#F8F9FA',
+        'brand-border': '#171717',
+        'brand-muted': '#7E7383',
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'DM Sans', 'sans-serif'],
@@ -30,12 +32,12 @@ export default {
         full: '0px',
       },
       boxShadow: {
-        'brutal-sm': '4px 4px 0px 0px hsl(0 0% 0% / 0.50)',
-        'brutal': '4px 4px 0px 0px hsl(0 0% 0% / 1.00)',
-        'brutal-md': '4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 2px 4px -1px hsl(0 0% 0% / 1.00)',
-        'brutal-lg': '4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 4px 6px -1px hsl(0 0% 0% / 1.00)',
-        'brutal-xl': '4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 8px 10px -1px hsl(0 0% 0% / 1.00)',
-        'brutal-accent': '4px 4px 0px 0px #C45A3C',
+        'brutal-sm': '4px 4px 0px 0px #17171780',
+        'brutal': '4px 4px 0px 0px #171717',
+        'brutal-md': '4px 4px 0px 0px #171717, 4px 2px 4px -1px #171717',
+        'brutal-lg': '4px 4px 0px 0px #171717, 4px 4px 6px -1px #171717',
+        'brutal-xl': '4px 4px 0px 0px #171717, 4px 8px 10px -1px #171717',
+        'brutal-accent': '4px 4px 0px 0px #6F3393',
       },
     },
   },

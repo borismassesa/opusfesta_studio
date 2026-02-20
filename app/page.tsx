@@ -8,7 +8,6 @@ import HeroSection from '@/components/HeroSection';
 import FeaturedProjects from '@/components/FeaturedProjects';
 import ServicesSection from '@/components/ServicesSection';
 import ProcessSection from '@/components/ProcessSection';
-import VideoLightboxSection from '@/components/VideoLightboxSection';
 import SignatureWorkSection from '@/components/SignatureWorkSection';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 import FAQSection from '@/components/FAQSection';
@@ -29,7 +28,6 @@ export default function Home() {
       <ServicesSection />
       <ProcessSection />
       <SignatureWorkSection />
-      <VideoLightboxSection />
       <TestimonialsCarousel />
       <FAQSection />
       <CTASection />

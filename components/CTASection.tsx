@@ -20,7 +20,7 @@ export default function CTASection() {
   return (
     <section
       ref={sectionRef}
-      className="relative z-10 bg-brand-bg border-t-4 border-brand-border overflow-hidden"
+      className="relative z-10 bg-brand-bg overflow-hidden"
     >
       <div
         className={`max-w-[1400px] mx-auto px-6 lg:px-12 py-24 lg:py-32 transition-all duration-700 ${
