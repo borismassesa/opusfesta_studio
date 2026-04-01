@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { DM_Sans, Space_Mono } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -15,19 +17,27 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OpusFesta Studio | Cinematic Wedding & Event Visuals",
+  title: "OpusStudio",
   description: "Capturing life's most defining moments.",
 };
 
+type RootLayoutProps = Readonly<{
+  children: ReactNode;
+}>;
+
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: RootLayoutProps) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${dmSans.variable} ${spaceMono.variable} font-sans`}>
-        {children}
+        <ClerkProvider
+          signInUrl="/portal/login"
+          signUpUrl="/portal/signup"
+          afterSignOutUrl="/"
+        >
+          {children as any}
+        </ClerkProvider>
       </body>
     </html>
   );

@@ -2,10 +2,31 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    qualities: [100, 75],
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'hoirqrkdgbmvpwutwuwj.supabase.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ppdapuqehwlfwofbpbvb.supabase.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.clerk.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'randomuser.me',
       },
     ],
   },
